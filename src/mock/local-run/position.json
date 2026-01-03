@@ -1,0 +1,23 @@
+{
+    "generated_at": "2025-12-31T10:39:11.801315",
+    "trading_mode": "testnet",
+    "accounts": [
+        {
+            "account_id": 1,
+            "account_name": "MVP Trail",
+            "model": "deepseek-chat",
+            "environment": "testnet",
+            "wallet_address": "0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4",
+            "total_unrealized_pnl": 0.0,
+            "available_cash": 98.056061,
+            "used_margin": 0.0,
+            "positions_value": 0.0,
+            "positions": [],
+            "total_assets": 98.056061,
+            "margin_usage_percent": 0.0,
+            "margin_mode": "cross",
+            "initial_capital": 10000.0,
+            "total_return": -0.9901943939000001
+        }
+    ]
+}

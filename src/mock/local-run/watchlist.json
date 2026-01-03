@@ -1,0 +1,15 @@
+{
+    "symbols": [
+        "BTC",
+        "ETH",
+        "DOGE",
+        "SOL",
+        "BNB",
+        "HYPE",
+        "ANIME",
+        "SPX",
+        "TRUMP",
+        "TST"
+    ],
+    "max_symbols": 10
+}

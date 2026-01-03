@@ -1,0 +1,35 @@
+{
+    "prices": {
+        "BTC": {
+            "symbol": "BTC",
+            "price": 109377.5,
+            "timestamp": 1761212728667
+        },
+        "ETH": {
+            "symbol": "ETH",
+            "price": 3883.15,
+            "timestamp": 1761212728667
+        },
+        "SOL": {
+            "symbol": "SOL",
+            "price": 188.155,
+            "timestamp": 1761212728667
+        },
+        "BNB": {
+            "symbol": "BNB",
+            "price": 1103.1,
+            "timestamp": 1761212728667
+        },
+        "DOGE": {
+            "symbol": "DOGE",
+            "price": 0.194545,
+            "timestamp": 1761212728667
+        },
+        "XRP": {
+            "symbol": "XRP",
+            "price": 2.40875,
+            "timestamp": 1761212728667
+        }
+    },
+    "serverTime": 1761212728667
+}

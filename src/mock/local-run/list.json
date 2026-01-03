@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "username": "default",
+        "name": "MVP Trail",
+        "account_type": "AI",
+        "initial_capital": 10000.0,
+        "current_cash": 10000.0,
+        "frozen_cash": 0.0,
+        "model": "deepseek-chat",
+        "base_url": "https://openrouter.fans/v1",
+        "api_key": "sk-JXcHCjXVW1U6tbGzQJMkPyur7vmNN52UGyFjvH6trnvGjTaU",
+        "is_active": true,
+        "auto_trading_enabled": true,
+        "wallet_address": null,
+        "has_mainnet_wallet": false
+    }
+]

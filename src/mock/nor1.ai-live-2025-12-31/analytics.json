@@ -1,0 +1,1573 @@
+{
+    "analytics": [
+        {
+            "id": "run_id=1",
+            "last_trade_exit_time": 1765561633,
+            "aggregation_id": 3,
+            "updated_at": 1765561779.579528,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 18.36237068965518,
+                "win_rate": 35.58282208588957,
+                "avg_losers_net_pnl": -16.63402380952383
+            },
+            "model_id": "gpt-5.1",
+            "last_convo_doc_id": "gpt-5.1_1765502150.108078",
+            "last_trade_doc_id": "run_1_0a7bd58d-a15f-4f2e-a24b-6001fad3c926",
+            "last_convo_timestamp": 1765502150.10768,
+            "run_id": 1,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 169.55848670756632,
+                "avg_convo_leverage": 8.073995771670191,
+                "median_convo_leverage": 8,
+                "total_trades": 652,
+                "avg_size_of_trade_notional": 3803.70388297546,
+                "median_size_of_trade_notional": 2961.89915,
+                "median_holding_period_mins": 17.799999999999997
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 383,
+                "num_long_signals": 1509,
+                "num_hold_signals": 23266,
+                "avg_confidence": 0.29012762821009974,
+                "pct_mins_flat_combined": 49.71739823411288,
+                "total_signals": 25778,
+                "num_close_signals": 620,
+                "pct_mins_short_combined": 14.601740393453822,
+                "pct_mins_long_combined": 35.680861372433306
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -1366.4300000000003,
+                "overall_pnl_with_fees": -2726.2200000000025,
+                "biggest_net_gain": 722.02,
+                "total_fees_paid": 906.5299999999982,
+                "biggest_net_loss": -476.06
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7055214723926381
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=10",
+            "last_trade_exit_time": 1765561956,
+            "aggregation_id": 4,
+            "updated_at": 1765562475.272288,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 23.929999999999993,
+                "win_rate": 26.31578947368421,
+                "avg_losers_net_pnl": -38.81741071428571
+            },
+            "model_id": "x-ai/grok-4",
+            "last_convo_doc_id": "grok-4_1765501679.22482",
+            "last_trade_doc_id": "run_10_ab278b19-2ed2-44f3-bcc7-dbb7875d8543",
+            "last_convo_timestamp": 1765501679.224426,
+            "run_id": 10,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 185.09495614035086,
+                "avg_convo_leverage": 10.286605504587156,
+                "median_convo_leverage": 10,
+                "total_trades": 304,
+                "avg_size_of_trade_notional": 2586.5243713815785,
+                "median_size_of_trade_notional": 507.9356,
+                "median_holding_period_mins": 11.608333333333334
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 515,
+                "num_long_signals": 2210,
+                "num_hold_signals": 17995,
+                "avg_confidence": 0.34675512436390304,
+                "pct_mins_flat_combined": 41.72798047562259,
+                "total_signals": 21027,
+                "num_close_signals": 306,
+                "pct_mins_short_combined": 10.297358509947308,
+                "pct_mins_long_combined": 47.97466101443011
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -5662.310000000005,
+                "overall_pnl_with_fees": -6780.699999999996,
+                "biggest_net_gain": 749.87,
+                "total_fees_paid": 745.5399999999994,
+                "biggest_net_loss": -2421.66
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7993421052631579
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=11",
+            "last_trade_exit_time": 1765562350,
+            "aggregation_id": 329,
+            "updated_at": 1765562492.503339,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 47.743319838056706,
+                "win_rate": 30.158730158730158,
+                "avg_losers_net_pnl": -32.327360139860176
+            },
+            "model_id": "kimi-k2-thinking",
+            "last_convo_doc_id": "kimi-k2-thinking_1765501568.666225",
+            "last_trade_doc_id": "run_11_157dc1ff-db67-4cf7-b4fa-3d8f9cebcf25",
+            "last_convo_timestamp": 1765501568.665507,
+            "run_id": 11,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 66.16009361009358,
+                "avg_convo_leverage": 9.706732597945987,
+                "median_convo_leverage": 10,
+                "total_trades": 819,
+                "avg_size_of_trade_notional": 11715.882008669096,
+                "median_size_of_trade_notional": 7649.558600000001,
+                "median_holding_period_mins": 22.516666666666666
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0.65,
+                "num_short_signals": 401,
+                "num_long_signals": 2228,
+                "num_hold_signals": 4403,
+                "avg_confidence": 0.41395620989051823,
+                "pct_mins_flat_combined": 69.38562797703489,
+                "total_signals": 7947,
+                "num_close_signals": 915,
+                "pct_mins_short_combined": 7.87347385841605,
+                "pct_mins_long_combined": 22.740898164549066
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -1502.3599999999997,
+                "overall_pnl_with_fees": -6698.650000000006,
+                "biggest_net_gain": 2959.41,
+                "total_fees_paid": 3464.2900000000054,
+                "biggest_net_loss": -1998.46
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7741147741147741
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=12",
+            "last_trade_exit_time": 1765561973,
+            "aggregation_id": 329,
+            "updated_at": 1765562507.456442,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 75.66125000000005,
+                "win_rate": 36.67621776504298,
+                "avg_losers_net_pnl": -62.72683257918555
+            },
+            "model_id": "kimi-k2-thinking",
+            "last_convo_doc_id": "kimi-k2-thinking_1765501715.521985",
+            "last_trade_doc_id": "run_12_8ff1ac75-07ac-47c2-b802-be69091bccf5",
+            "last_convo_timestamp": 1765501715.521511,
+            "run_id": 12,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 187.881088825215,
+                "avg_convo_leverage": 10.408333333333333,
+                "median_convo_leverage": 10,
+                "total_trades": 349,
+                "avg_size_of_trade_notional": 8486.569644126077,
+                "median_size_of_trade_notional": 4004.5836,
+                "median_holding_period_mins": 44.3
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 249,
+                "num_long_signals": 951,
+                "num_hold_signals": 8189,
+                "avg_confidence": 0.30281346510191,
+                "pct_mins_flat_combined": 58.22797863404454,
+                "total_signals": 9714,
+                "num_close_signals": 325,
+                "pct_mins_short_combined": 9.451413988514975,
+                "pct_mins_long_combined": 32.32060737744049
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -1952.3399999999995,
+                "overall_pnl_with_fees": -4177.989999999999,
+                "biggest_net_gain": 2364.36,
+                "total_fees_paid": 1483.7700000000007,
+                "biggest_net_loss": -2813.12
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7822349570200573
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=13",
+            "last_trade_exit_time": 1765562017,
+            "aggregation_id": 5,
+            "updated_at": 1765562523.664289,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 27.51194719471947,
+                "win_rate": 33.96860986547085,
+                "avg_losers_net_pnl": -23.74322580645162
+            },
+            "model_id": "deepseek/deepseek-chat-v3.1",
+            "last_convo_doc_id": "deepseek-chat-v3.1_1765502167.153179",
+            "last_trade_doc_id": "run_13_64268e95-1356-4d1f-8a0e-10e2025a7b16",
+            "last_convo_timestamp": 1765502167.152546,
+            "run_id": 13,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 82.47505605381173,
+                "avg_convo_leverage": 9.381744966442952,
+                "median_convo_leverage": 10,
+                "total_trades": 892,
+                "avg_size_of_trade_notional": 4593.1871804932725,
+                "median_size_of_trade_notional": 1999.4407999999999,
+                "median_holding_period_mins": 14.325
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0.65,
+                "num_short_signals": 429,
+                "num_long_signals": 2551,
+                "num_hold_signals": 21603,
+                "avg_confidence": 0.4154547974498305,
+                "pct_mins_flat_combined": 48.75133717947141,
+                "total_signals": 25253,
+                "num_close_signals": 670,
+                "pct_mins_short_combined": 8.426059140846903,
+                "pct_mins_long_combined": 42.822603679681684
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -3690.3700000000017,
+                "overall_pnl_with_fees": -5648.640000000008,
+                "biggest_net_gain": 1642.59,
+                "total_fees_paid": 1305.4699999999968,
+                "biggest_net_loss": -2984.13
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.844170403587444
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=14",
+            "last_trade_exit_time": 1765561931,
+            "aggregation_id": 5,
+            "updated_at": 1765562003.008466,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 67.78222727272731,
+                "win_rate": 32.98350824587706,
+                "avg_losers_net_pnl": -32.34069351230427
+            },
+            "model_id": "deepseek/deepseek-chat-v3.1",
+            "last_convo_doc_id": "deepseek-chat-v3.1_1765501856.251467",
+            "last_trade_doc_id": "run_14_77f0031f-e295-4e12-b153-7b34bea089a0",
+            "last_convo_timestamp": 1765501856.250747,
+            "run_id": 14,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 92.27901049475277,
+                "avg_convo_leverage": 9.438440648269822,
+                "median_convo_leverage": 10,
+                "total_trades": 667,
+                "avg_size_of_trade_notional": 8602.62049310345,
+                "median_size_of_trade_notional": 4463.7512,
+                "median_holding_period_mins": 25.116666666666667
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.78,
+                "num_short_signals": 447,
+                "num_long_signals": 1836,
+                "num_hold_signals": 15945,
+                "avg_confidence": 0.7217883519730366,
+                "pct_mins_flat_combined": 62.32804508113989,
+                "total_signals": 18956,
+                "num_close_signals": 708,
+                "pct_mins_short_combined": 9.017543055515272,
+                "pct_mins_long_combined": 28.65441186334482
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": 3339.899999999998,
+                "overall_pnl_with_fees": 455.80000000000234,
+                "biggest_net_gain": 4435.17,
+                "total_fees_paid": 1922.5899999999979,
+                "biggest_net_loss": -897.01
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.712143928035982
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=15",
+            "last_trade_exit_time": 1765562040,
+            "aggregation_id": 5,
+            "updated_at": 1765562558.983499,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 35.03752265861028,
+                "win_rate": 30.31135531135531,
+                "avg_losers_net_pnl": -25.831773981603163
+            },
+            "model_id": "deepseek/deepseek-chat-v3.1",
+            "last_convo_doc_id": "deepseek-chat-v3.1_1765501787.907202",
+            "last_trade_doc_id": "run_15_345cd902-9f2d-4aae-a838-4063b73e93c0",
+            "last_convo_timestamp": 1765501787.906748,
+            "run_id": 15,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 49.432905982905964,
+                "avg_convo_leverage": 9.759230937295172,
+                "median_convo_leverage": 10,
+                "total_trades": 1092,
+                "avg_size_of_trade_notional": 6480.602560256407,
+                "median_size_of_trade_notional": 1999.5657500000002,
+                "median_holding_period_mins": 12.866666666666667
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0.7,
+                "num_short_signals": 793,
+                "num_long_signals": 3784,
+                "num_hold_signals": 13051,
+                "avg_confidence": 0.4273859275053423,
+                "pct_mins_flat_combined": 59.959884824562884,
+                "total_signals": 18760,
+                "num_close_signals": 1132,
+                "pct_mins_short_combined": 6.993105768441797,
+                "pct_mins_long_combined": 33.04700940699533
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -1432.1600000000005,
+                "overall_pnl_with_fees": -8060.560000000004,
+                "biggest_net_gain": 1341.72,
+                "total_fees_paid": 4418.750000000011,
+                "biggest_net_loss": -1170.68
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7655677655677655
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=16",
+            "last_trade_exit_time": 1765562052,
+            "aggregation_id": 5,
+            "updated_at": 1765562574.93384,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 31.73085271317831,
+                "win_rate": 32.41206030150754,
+                "avg_losers_net_pnl": -43.456654275092966
+            },
+            "model_id": "deepseek/deepseek-chat-v3.1",
+            "last_convo_doc_id": "deepseek-chat-v3.1_1765501628.964752",
+            "last_trade_doc_id": "run_16_a05b249b-a08c-4b04-bb9e-dee2d118eb04",
+            "last_convo_timestamp": 1765501628.964251,
+            "run_id": 16,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 113.34045226130644,
+                "avg_convo_leverage": 10.338427947598253,
+                "median_convo_leverage": 10,
+                "total_trades": 398,
+                "avg_size_of_trade_notional": 3234.093602512562,
+                "median_size_of_trade_notional": 701.0807500000001,
+                "median_holding_period_mins": 15.083333333333334
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0.6,
+                "num_short_signals": 328,
+                "num_long_signals": 1504,
+                "num_hold_signals": 13307,
+                "avg_confidence": 0.3792830480113104,
+                "pct_mins_flat_combined": 67.27443603141312,
+                "total_signals": 15538,
+                "num_close_signals": 399,
+                "pct_mins_short_combined": 6.162123729524828,
+                "pct_mins_long_combined": 26.563440239062047
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -5965.919999999995,
+                "overall_pnl_with_fees": -7596.559999999999,
+                "biggest_net_gain": 939.14,
+                "total_fees_paid": 1087.1799999999967,
+                "biggest_net_loss": -3188.21
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8291457286432161
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=17",
+            "last_trade_exit_time": 1765562093,
+            "aggregation_id": 6969,
+            "updated_at": 1765562594.969347,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 59.033284671532854,
+                "win_rate": 38.26815642458101,
+                "avg_losers_net_pnl": -41.439773755656105
+            },
+            "model_id": "typhoon",
+            "last_convo_doc_id": "mystery-model_1765501148.951617",
+            "last_trade_doc_id": "run_17_b32c9388-cdb0-4883-89de-f35b981dad8d",
+            "last_convo_timestamp": 1765501148.951294,
+            "run_id": 17,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 184.91298882681582,
+                "avg_convo_leverage": 9.112567463377024,
+                "median_convo_leverage": 10,
+                "total_trades": 358,
+                "avg_size_of_trade_notional": 6852.84012094972,
+                "median_size_of_trade_notional": 2205.9964,
+                "median_holding_period_mins": 42.516666666666666
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 155,
+                "num_long_signals": 1142,
+                "num_hold_signals": 10811,
+                "avg_confidence": 0.32455179121412947,
+                "pct_mins_flat_combined": 46.00185268080261,
+                "total_signals": 12338,
+                "num_close_signals": 230,
+                "pct_mins_short_combined": 7.7139262108024,
+                "pct_mins_long_combined": 46.28422110839499
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": 378.449999999999,
+                "overall_pnl_with_fees": -1070.6300000000008,
+                "biggest_net_gain": 1849.14,
+                "total_fees_paid": 966.0799999999994,
+                "biggest_net_loss": -619.29
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8631284916201117
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=18",
+            "last_trade_exit_time": 1765562111,
+            "aggregation_id": 6969,
+            "updated_at": 1765562611.724909,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 68.14439024390242,
+                "win_rate": 35.04273504273504,
+                "avg_losers_net_pnl": -44.03315789473684
+            },
+            "model_id": "typhoon",
+            "last_convo_doc_id": "mystery-model_1765501128.783158",
+            "last_trade_doc_id": "run_18_87c8fde7-5e6e-4b0c-994c-d3aeb01fbd4b",
+            "last_convo_timestamp": 1765501128.782884,
+            "run_id": 18,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 341.6947293447293,
+                "avg_convo_leverage": 5.7105263157894735,
+                "median_convo_leverage": 5,
+                "total_trades": 117,
+                "avg_size_of_trade_notional": 6664.670799999999,
+                "median_size_of_trade_notional": 3859.4816,
+                "median_holding_period_mins": 48.416666666666664
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.75,
+                "num_short_signals": 65,
+                "num_long_signals": 239,
+                "num_hold_signals": 3765,
+                "avg_confidence": 0.4948317020768572,
+                "pct_mins_flat_combined": 83.18393730131899,
+                "total_signals": 4189,
+                "num_close_signals": 106,
+                "pct_mins_short_combined": 1.58805921590407,
+                "pct_mins_long_combined": 15.228003482776947
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -105.59000000000043,
+                "overall_pnl_with_fees": -552.5999999999996,
+                "biggest_net_gain": 467.35,
+                "total_fees_paid": 298.04999999999995,
+                "biggest_net_loss": -493.02
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.811965811965812
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=19",
+            "last_trade_exit_time": 1765562127,
+            "aggregation_id": 2,
+            "updated_at": 1765562628.394012,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 8.13342960288808,
+                "win_rate": 28.38114754098361,
+                "avg_losers_net_pnl": -9.202618025751077
+            },
+            "model_id": "qwen/qwen3-max",
+            "last_convo_doc_id": "qwen3-max_1765501937.364725",
+            "last_trade_doc_id": "run_19_54e40d12-b98b-4177-90f1-8065c65eda13",
+            "last_convo_timestamp": 1765501937.364356,
+            "run_id": 19,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 98.55973360655747,
+                "avg_convo_leverage": 8.63388123011665,
+                "median_convo_leverage": 8,
+                "total_trades": 976,
+                "avg_size_of_trade_notional": 3034.245149282789,
+                "median_size_of_trade_notional": 997.1860999999999,
+                "median_holding_period_mins": 9.2
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0.72,
+                "num_short_signals": 504,
+                "num_long_signals": 3268,
+                "num_hold_signals": 21499,
+                "avg_confidence": 0.46810890445032816,
+                "pct_mins_flat_combined": 53.20881292716611,
+                "total_signals": 26133,
+                "num_close_signals": 862,
+                "pct_mins_short_combined": 13.791535599806204,
+                "pct_mins_long_combined": 32.99965147302768
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -2231.6199999999985,
+                "overall_pnl_with_fees": -4179.670000000003,
+                "biggest_net_gain": 232.55,
+                "total_fees_paid": 1298.6099999999915,
+                "biggest_net_loss": -737.61
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7961065573770492
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=2",
+            "last_trade_exit_time": 1765561648,
+            "aggregation_id": 3,
+            "updated_at": 1765561794.832078,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 19.88635714285715,
+                "win_rate": 34.229828850855746,
+                "avg_losers_net_pnl": -16.89546468401487
+            },
+            "model_id": "gpt-5.1",
+            "last_convo_doc_id": "gpt-5.1_1765502155.019522",
+            "last_trade_doc_id": "run_2_e7798e09-c5db-4bee-abae-b21592d64d77",
+            "last_convo_timestamp": 1765502155.018879,
+            "run_id": 2,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 178.827139364303,
+                "avg_convo_leverage": 8.646209386281589,
+                "median_convo_leverage": 9,
+                "total_trades": 409,
+                "avg_size_of_trade_notional": 4798.57259217604,
+                "median_size_of_trade_notional": 4498.0665,
+                "median_holding_period_mins": 16.4
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.77,
+                "num_short_signals": 186,
+                "num_long_signals": 645,
+                "num_hold_signals": 15223,
+                "avg_confidence": 0.7428746121555243,
+                "pct_mins_flat_combined": 66.75776219085766,
+                "total_signals": 16437,
+                "num_close_signals": 383,
+                "pct_mins_short_combined": 9.152048233866124,
+                "pct_mins_long_combined": 24.09018957527622
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -966.5999999999995,
+                "overall_pnl_with_fees": -1760.7900000000006,
+                "biggest_net_gain": 458.45,
+                "total_fees_paid": 529.4700000000001,
+                "biggest_net_loss": -386.2
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7041564792176039
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=20",
+            "last_trade_exit_time": 1765555111,
+            "aggregation_id": 2,
+            "updated_at": 1765555606.502862,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 10.107816091954021,
+                "win_rate": 30.313588850174217,
+                "avg_losers_net_pnl": -5.735033333333333
+            },
+            "model_id": "qwen/qwen3-max",
+            "last_convo_doc_id": "qwen3-max_1765501933.218765",
+            "last_trade_doc_id": "run_20_4877bf0d-ac59-4301-8626-57aecb93641c",
+            "last_convo_timestamp": 1765501933.218288,
+            "run_id": 20,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 105.47799070847852,
+                "avg_convo_leverage": 7.110757816640169,
+                "median_convo_leverage": 6,
+                "total_trades": 861,
+                "avg_size_of_trade_notional": 2355.568492682926,
+                "median_size_of_trade_notional": 1397.7468,
+                "median_holding_period_mins": 13.266666666666667
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.79,
+                "num_short_signals": 297,
+                "num_long_signals": 1590,
+                "num_hold_signals": 10569,
+                "avg_confidence": 0.7432556566188134,
+                "pct_mins_flat_combined": 64.52127819609132,
+                "total_signals": 13303,
+                "num_close_signals": 846,
+                "pct_mins_short_combined": 5.513663702147274,
+                "pct_mins_long_combined": 29.96505810176142
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": 69.79999999999998,
+                "overall_pnl_with_fees": -802.8799999999994,
+                "biggest_net_gain": 378.28,
+                "total_fees_paid": 581.5699999999991,
+                "biggest_net_loss": -129.52
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.794425087108014
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=21",
+            "last_trade_exit_time": 1765555096,
+            "aggregation_id": 2,
+            "updated_at": 1765555623.520758,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 13.41429975429976,
+                "win_rate": 28.702397743300423,
+                "avg_losers_net_pnl": -13.851879327398619
+            },
+            "model_id": "qwen/qwen3-max",
+            "last_convo_doc_id": "qwen3-max_1765501933.810873",
+            "last_trade_doc_id": "run_21_90ec7676-337b-48bb-9bb4-a1d6cccc0232",
+            "last_convo_timestamp": 1765501933.810498,
+            "run_id": 21,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 44.31117771509168,
+                "avg_convo_leverage": 9.891091364775574,
+                "median_convo_leverage": 10,
+                "total_trades": 1418,
+                "avg_size_of_trade_notional": 5497.115472355429,
+                "median_size_of_trade_notional": 2065.2372,
+                "median_holding_period_mins": 8.608333333333334
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0.72,
+                "num_short_signals": 653,
+                "num_long_signals": 3736,
+                "num_hold_signals": 18165,
+                "avg_confidence": 0.45551327949381265,
+                "pct_mins_flat_combined": 61.81205685667701,
+                "total_signals": 24022,
+                "num_close_signals": 1467,
+                "pct_mins_short_combined": 11.738934875317316,
+                "pct_mins_long_combined": 26.449008268005674
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -2445.6100000000038,
+                "overall_pnl_with_fees": -8544.630000000016,
+                "biggest_net_gain": 574.81,
+                "total_fees_paid": 4066.2000000000094,
+                "biggest_net_loss": -1953.17
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7926657263751763
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=22",
+            "last_trade_exit_time": 1765555399,
+            "aggregation_id": 2,
+            "updated_at": 1765555640.673987,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 29.661755319148956,
+                "win_rate": 31.333333333333336,
+                "avg_losers_net_pnl": -19.690558252427195
+            },
+            "model_id": "qwen/qwen3-max",
+            "last_convo_doc_id": "qwen3-max_1765501158.486275",
+            "last_trade_doc_id": "run_22_bc2a9a8a-c19a-41a5-9667-998627f93022",
+            "last_convo_timestamp": 1765501158.485961,
+            "run_id": 22,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 101.07555555555552,
+                "avg_convo_leverage": 12.929940374787053,
+                "median_convo_leverage": 10,
+                "total_trades": 600,
+                "avg_size_of_trade_notional": 7042.739805333338,
+                "median_size_of_trade_notional": 1529.6399999999999,
+                "median_holding_period_mins": 20.40833333333333
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0.65,
+                "num_short_signals": 473,
+                "num_long_signals": 4223,
+                "num_hold_signals": 8379,
+                "avg_confidence": 0.44982141544791915,
+                "pct_mins_flat_combined": 60.50700935420703,
+                "total_signals": 13607,
+                "num_close_signals": 532,
+                "pct_mins_short_combined": 11.185018913760423,
+                "pct_mins_long_combined": 28.307971732032538
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": 739.6500000000007,
+                "overall_pnl_with_fees": -2536.1000000000013,
+                "biggest_net_gain": 739.57,
+                "total_fees_paid": 2183.82,
+                "biggest_net_loss": -479.26
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.775
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=23",
+            "last_trade_exit_time": 1765560999,
+            "aggregation_id": 6969,
+            "updated_at": 1765561055.730393,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 221.4264,
+                "win_rate": 31.645569620253166,
+                "avg_losers_net_pnl": -93.05148148148149
+            },
+            "model_id": "typhoon",
+            "last_convo_doc_id": "mystery-model_1765501765.302517",
+            "last_trade_doc_id": "run_23_70c67dcf-1a3c-40e9-b18f-b0e88113da65",
+            "last_convo_timestamp": 1765501765.302051,
+            "run_id": 23,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 439.7715189873419,
+                "avg_convo_leverage": 9.215258855585832,
+                "median_convo_leverage": 10,
+                "total_trades": 158,
+                "avg_size_of_trade_notional": 9554.448407594939,
+                "median_size_of_trade_notional": 3385.1684999999998,
+                "median_holding_period_mins": 151.48333333333335
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 94,
+                "num_long_signals": 640,
+                "num_hold_signals": 9704,
+                "avg_confidence": 0.22350090278437867,
+                "pct_mins_flat_combined": 51.9068033261711,
+                "total_signals": 10523,
+                "num_close_signals": 83,
+                "pct_mins_short_combined": 5.402900583956482,
+                "pct_mins_long_combined": 42.69029608987241
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": 2117.2400000000007,
+                "overall_pnl_with_fees": 1021.759999999996,
+                "biggest_net_gain": 3083.83,
+                "total_fees_paid": 730.3099999999995,
+                "biggest_net_loss": -2066.44
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7911392405063291
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=24",
+            "last_trade_exit_time": 1765561025,
+            "aggregation_id": 6969,
+            "updated_at": 1765561074.295561,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 26.00741379310343,
+                "win_rate": 40.55944055944056,
+                "avg_losers_net_pnl": -41.39729411764709
+            },
+            "model_id": "typhoon",
+            "last_convo_doc_id": "mystery-model_1765501774.71501",
+            "last_trade_doc_id": "run_24_0950f858-6c19-4982-8c41-52b7194e5221",
+            "last_convo_timestamp": 1765501774.714599,
+            "run_id": 24,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 370.78531468531463,
+                "avg_convo_leverage": 10.534682080924856,
+                "median_convo_leverage": 10,
+                "total_trades": 143,
+                "avg_size_of_trade_notional": 3874.0400692307694,
+                "median_size_of_trade_notional": 355.8852,
+                "median_holding_period_mins": 96.38333333333334
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 49,
+                "num_long_signals": 643,
+                "num_hold_signals": 7682,
+                "avg_confidence": 0.22720842204873828,
+                "pct_mins_flat_combined": 60.6418383656309,
+                "total_signals": 8454,
+                "num_close_signals": 80,
+                "pct_mins_short_combined": 4.08185873680627,
+                "pct_mins_long_combined": 35.27630289756282
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -1571.0700000000006,
+                "overall_pnl_with_fees": -2010.3400000000015,
+                "biggest_net_gain": 380.1,
+                "total_fees_paid": 292.74999999999966,
+                "biggest_net_loss": -632.59
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8951048951048951
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=25",
+            "last_trade_exit_time": 1765561057,
+            "aggregation_id": 1,
+            "updated_at": 1765561633.935048,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 12.761904761904772,
+                "win_rate": 31.343283582089555,
+                "avg_losers_net_pnl": -12.92445652173916
+            },
+            "model_id": "gemini-3-pro-preview",
+            "last_convo_doc_id": "gemini-3-pro_1765502131.732711",
+            "last_trade_doc_id": "run_25_755c7308-d4cd-439e-a30c-57566fa55d9f",
+            "last_convo_timestamp": 1765502131.732368,
+            "run_id": 25,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 50.601809136137526,
+                "avg_convo_leverage": 8.358348223148699,
+                "median_convo_leverage": 10,
+                "total_trades": 1474,
+                "avg_size_of_trade_notional": 2663.4451929443667,
+                "median_size_of_trade_notional": 1623.06,
+                "median_holding_period_mins": 7.808333333333334
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0.75,
+                "num_short_signals": 569,
+                "num_long_signals": 4468,
+                "num_hold_signals": 24203,
+                "avg_confidence": 0.5177179018789082,
+                "pct_mins_flat_combined": 41.302608045261685,
+                "total_signals": 30656,
+                "num_close_signals": 1416,
+                "pct_mins_short_combined": 14.56590590299378,
+                "pct_mins_long_combined": 44.13148605174453
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -4369.69,
+                "overall_pnl_with_fees": -7183.550000000008,
+                "biggest_net_gain": 532.05,
+                "total_fees_paid": 1875.9899999999955,
+                "biggest_net_loss": -694.27
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8548168249660787
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=26",
+            "last_trade_exit_time": 1765561126,
+            "aggregation_id": 1,
+            "updated_at": 1765561654.275532,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 40.30958083832338,
+                "win_rate": 31.62878787878788,
+                "avg_losers_net_pnl": -23.61188365650972
+            },
+            "model_id": "gemini-3-pro-preview",
+            "last_convo_doc_id": "gemini-3-pro_1765501834.146478",
+            "last_trade_doc_id": "run_26_817c0d4a-0900-4332-9695-49a7634f2b43",
+            "last_convo_timestamp": 1765501834.14608,
+            "run_id": 26,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 169.9400883838382,
+                "avg_convo_leverage": 8.787379972565157,
+                "median_convo_leverage": 10,
+                "total_trades": 528,
+                "avg_size_of_trade_notional": 6234.254799053026,
+                "median_size_of_trade_notional": 4894.4349999999995,
+                "median_holding_period_mins": 27.241666666666667
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.8,
+                "num_short_signals": 202,
+                "num_long_signals": 1256,
+                "num_hold_signals": 9179,
+                "avg_confidence": 0.7330941462099297,
+                "pct_mins_flat_combined": 50.41638278600426,
+                "total_signals": 11121,
+                "num_close_signals": 484,
+                "pct_mins_short_combined": 13.199249251176562,
+                "pct_mins_long_combined": 36.38436796281918
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -191.85000000000156,
+                "overall_pnl_with_fees": -1792.1899999999998,
+                "biggest_net_gain": 542.95,
+                "total_fees_paid": 1066.9199999999971,
+                "biggest_net_loss": -382.32
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7727272727272727
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=27",
+            "last_trade_exit_time": 1765561156,
+            "aggregation_id": 1,
+            "updated_at": 1765561670.961869,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 36.89650862068968,
+                "win_rate": 29.554140127388536,
+                "avg_losers_net_pnl": -26.632603978300182
+            },
+            "model_id": "gemini-3-pro-preview",
+            "last_convo_doc_id": "gemini-3-pro_1765501826.054364",
+            "last_trade_doc_id": "run_27_3a61a402-4d41-47d0-ad1a-889d3d667ea6",
+            "last_convo_timestamp": 1765501826.053892,
+            "run_id": 27,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 96.42375796178351,
+                "avg_convo_leverage": 8.928545909253305,
+                "median_convo_leverage": 10,
+                "total_trades": 785,
+                "avg_size_of_trade_notional": 5849.492650191075,
+                "median_size_of_trade_notional": 4001.8749999999995,
+                "median_holding_period_mins": 19.5
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0.75,
+                "num_short_signals": 416,
+                "num_long_signals": 2383,
+                "num_hold_signals": 9953,
+                "avg_confidence": 0.557623534649087,
+                "pct_mins_flat_combined": 41.07866053839899,
+                "total_signals": 13478,
+                "num_close_signals": 726,
+                "pct_mins_short_combined": 12.013699603047346,
+                "pct_mins_long_combined": 46.90763985855366
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -3171.029999999999,
+                "overall_pnl_with_fees": -6167.840000000002,
+                "biggest_net_gain": 1706.28,
+                "total_fees_paid": 1998.0699999999947,
+                "biggest_net_loss": -1208.67
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7923566878980892
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=28",
+            "last_trade_exit_time": 1765561201,
+            "aggregation_id": 1,
+            "updated_at": 1765561689.406711,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 52.972024539877324,
+                "win_rate": 27.39495798319328,
+                "avg_losers_net_pnl": -34.248125000000016
+            },
+            "model_id": "gemini-3-pro-preview",
+            "last_convo_doc_id": "gemini-3-pro_1765501819.433139",
+            "last_trade_doc_id": "run_28_5683c61d-a12d-4850-98e5-3783df9940cb",
+            "last_convo_timestamp": 1765501819.432624,
+            "run_id": 28,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 138.10507002801126,
+                "avg_convo_leverage": 10.173460537727667,
+                "median_convo_leverage": 10,
+                "total_trades": 595,
+                "avg_size_of_trade_notional": 5254.859138823529,
+                "median_size_of_trade_notional": 3441.1299999999997,
+                "median_holding_period_mins": 18.833333333333332
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0.75,
+                "num_short_signals": 180,
+                "num_long_signals": 2126,
+                "num_hold_signals": 11056,
+                "avg_confidence": 0.5524708171206226,
+                "pct_mins_flat_combined": 40.45444280547602,
+                "total_signals": 13878,
+                "num_close_signals": 516,
+                "pct_mins_short_combined": 16.20258391315214,
+                "pct_mins_long_combined": 43.34297328137183
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -4121.939999999999,
+                "overall_pnl_with_fees": -6160.750000000013,
+                "biggest_net_gain": 1004.43,
+                "total_fees_paid": 1359.179999999998,
+                "biggest_net_loss": -1838.19
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8605042016806723
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=3",
+            "last_trade_exit_time": 1765561609,
+            "aggregation_id": 3,
+            "updated_at": 1765561814.17859,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 31.663936651583708,
+                "win_rate": 28.010139416983527,
+                "avg_losers_net_pnl": -18.857781690140857
+            },
+            "model_id": "gpt-5.1",
+            "last_convo_doc_id": "gpt-5.1_1765501203.081623",
+            "last_trade_doc_id": "run_3_1e4701f9-aae5-4a2d-990c-801df68c5480",
+            "last_convo_timestamp": 1765501203.081362,
+            "run_id": 3,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 115.22705956907475,
+                "avg_convo_leverage": 8.463565022421525,
+                "median_convo_leverage": 8,
+                "total_trades": 789,
+                "avg_size_of_trade_notional": 6914.137954626109,
+                "median_size_of_trade_notional": 5602.4596,
+                "median_holding_period_mins": 15.466666666666667
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 269,
+                "num_long_signals": 1515,
+                "num_hold_signals": 9358,
+                "avg_confidence": 0.26298081734778506,
+                "pct_mins_flat_combined": 58.08309778873062,
+                "total_signals": 11990,
+                "num_close_signals": 848,
+                "pct_mins_short_combined": 11.591848003530595,
+                "pct_mins_long_combined": 30.325054207738777
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -1207.8799999999997,
+                "overall_pnl_with_fees": -3713.4900000000016,
+                "biggest_net_gain": 953.2,
+                "total_fees_paid": 1670.5899999999986,
+                "biggest_net_loss": -821.74
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8098859315589354
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=31",
+            "last_trade_exit_time": 1765561359,
+            "aggregation_id": 6,
+            "updated_at": 1765561706.862108,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 40.0668421052632,
+                "win_rate": 34.234234234234236,
+                "avg_losers_net_pnl": -35.34518264840189
+            },
+            "model_id": "claude-sonnet-4-5",
+            "last_convo_doc_id": "claude-sonnet-4-5_1765502141.966831",
+            "last_trade_doc_id": "run_31_1f7a168e-a52f-4b3d-ae6c-068eec3204e8",
+            "last_convo_timestamp": 1765502141.966441,
+            "run_id": 31,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 110.2806556556557,
+                "avg_convo_leverage": 8.857339765678843,
+                "median_convo_leverage": 8,
+                "total_trades": 666,
+                "avg_size_of_trade_notional": 7904.122017567564,
+                "median_size_of_trade_notional": 4984.1232,
+                "median_holding_period_mins": 15.541666666666666
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0.72,
+                "num_short_signals": 165,
+                "num_long_signals": 1286,
+                "num_hold_signals": 19569,
+                "avg_confidence": 0.5696205336533963,
+                "pct_mins_flat_combined": 65.24023884212839,
+                "total_signals": 21662,
+                "num_close_signals": 642,
+                "pct_mins_short_combined": 8.54140289034276,
+                "pct_mins_long_combined": 26.218358267528846
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -3216.230000000001,
+                "overall_pnl_with_fees": -6345.949999999994,
+                "biggest_net_gain": 953.79,
+                "total_fees_paid": 2086.3899999999967,
+                "biggest_net_loss": -1076.64
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8243243243243243
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=32",
+            "last_trade_exit_time": 1765561377,
+            "aggregation_id": 6,
+            "updated_at": 1765561725.145502,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 73.68847826086957,
+                "win_rate": 35.11450381679389,
+                "avg_losers_net_pnl": -76.66317647058823
+            },
+            "model_id": "claude-sonnet-4-5",
+            "last_convo_doc_id": "claude-sonnet-4-5_1765502167.247632",
+            "last_trade_doc_id": "run_32_db9bbd6d-212c-427c-b582-7c69c74bc6e6",
+            "last_convo_timestamp": 1765502167.247319,
+            "run_id": 32,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 548.5871501272263,
+                "avg_convo_leverage": 8.78515625,
+                "median_convo_leverage": 10,
+                "total_trades": 131,
+                "avg_size_of_trade_notional": 7815.230697709923,
+                "median_size_of_trade_notional": 6383.58,
+                "median_holding_period_mins": 144.1
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.78,
+                "num_short_signals": 33,
+                "num_long_signals": 223,
+                "num_hold_signals": 14372,
+                "avg_confidence": 0.7680829261672172,
+                "pct_mins_flat_combined": 69.43739851092272,
+                "total_signals": 14736,
+                "num_close_signals": 108,
+                "pct_mins_short_combined": 1.467185442455323,
+                "pct_mins_long_combined": 29.095416046621956
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -2581.9200000000005,
+                "overall_pnl_with_fees": -3126.700000000001,
+                "biggest_net_gain": 669.65,
+                "total_fees_paid": 363.29999999999995,
+                "biggest_net_loss": -610.69
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7175572519083969
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=33",
+            "last_trade_exit_time": 1765557508,
+            "aggregation_id": 6,
+            "updated_at": 1765557959.555184,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 23.03748704663216,
+                "win_rate": 31.71733771569433,
+                "avg_losers_net_pnl": -20.313766546329756
+            },
+            "model_id": "claude-sonnet-4-5",
+            "last_convo_doc_id": "claude-sonnet-4-5_1765502184.466084",
+            "last_trade_doc_id": "run_33_3c011282-a311-4108-870a-9908af437ca8",
+            "last_convo_timestamp": 1765502184.465753,
+            "run_id": 33,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 53.71714598740066,
+                "avg_convo_leverage": 9.269040247678019,
+                "median_convo_leverage": 9,
+                "total_trades": 1217,
+                "avg_size_of_trade_notional": 7243.089300986039,
+                "median_size_of_trade_notional": 3994.839,
+                "median_holding_period_mins": 11.5
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0.72,
+                "num_short_signals": 436,
+                "num_long_signals": 2794,
+                "num_hold_signals": 17009,
+                "avg_confidence": 0.590560201840848,
+                "pct_mins_flat_combined": 64.95193684010474,
+                "total_signals": 21403,
+                "num_close_signals": 1164,
+                "pct_mins_short_combined": 8.838194703439022,
+                "pct_mins_long_combined": 26.20986845645623
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -2175.650000000001,
+                "overall_pnl_with_fees": -7988.269999999991,
+                "biggest_net_gain": 674.25,
+                "total_fees_paid": 3875.0200000000164,
+                "biggest_net_loss": -626.96
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7912900575184881
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=34",
+            "last_trade_exit_time": 1765561407,
+            "aggregation_id": 6,
+            "updated_at": 1765561759.511548,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 41.555,
+                "win_rate": 32.83582089552239,
+                "avg_losers_net_pnl": -56.4215
+            },
+            "model_id": "claude-sonnet-4-5",
+            "last_convo_doc_id": "claude-sonnet-4-5_1765501824.025238",
+            "last_trade_doc_id": "run_34_a65a58c2-f463-44dd-91aa-10d511bb8ccb",
+            "last_convo_timestamp": 1765501824.02484,
+            "run_id": 34,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 291.5381840796018,
+                "avg_convo_leverage": 10.346020761245676,
+                "median_convo_leverage": 10,
+                "total_trades": 268,
+                "avg_size_of_trade_notional": 7889.338103731348,
+                "median_size_of_trade_notional": 6050.0512499999995,
+                "median_holding_period_mins": 52.05833333333334
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0.62,
+                "num_short_signals": 69,
+                "num_long_signals": 509,
+                "num_hold_signals": 13522,
+                "avg_confidence": 0.40847962601171434,
+                "pct_mins_flat_combined": 67.88096562324546,
+                "total_signals": 14332,
+                "num_close_signals": 232,
+                "pct_mins_short_combined": 12.134059682000924,
+                "pct_mins_long_combined": 19.984974694753614
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -5365.949999999998,
+                "overall_pnl_with_fees": -6499.030000000001,
+                "biggest_net_gain": 543.42,
+                "total_fees_paid": 755.3299999999991,
+                "biggest_net_loss": -1124.71
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7910447761194029
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=4",
+            "last_trade_exit_time": 1765561599,
+            "aggregation_id": 3,
+            "updated_at": 1765561831.468098,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 50.39185792349729,
+                "win_rate": 34.07821229050279,
+                "avg_losers_net_pnl": -25.392881355932214
+            },
+            "model_id": "gpt-5.1",
+            "last_convo_doc_id": "gpt-5.1_1765501266.974961",
+            "last_trade_doc_id": "run_4_dfda942d-9336-48d5-ac88-144e3658890f",
+            "last_convo_timestamp": 1765501266.974527,
+            "run_id": 4,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 166.1707014276848,
+                "avg_convo_leverage": 10.303030303030303,
+                "median_convo_leverage": 10,
+                "total_trades": 537,
+                "avg_size_of_trade_notional": 6402.869972439477,
+                "median_size_of_trade_notional": 4878.3124,
+                "median_holding_period_mins": 14.816666666666666
+            },
+            "competition_id": 4,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 122,
+                "num_long_signals": 1198,
+                "num_hold_signals": 10400,
+                "avg_confidence": 0.29745144059565204,
+                "pct_mins_flat_combined": 52.19481190060037,
+                "total_signals": 12356,
+                "num_close_signals": 636,
+                "pct_mins_short_combined": 11.206522472561467,
+                "pct_mins_long_combined": 36.59866562683817
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": 2594.219999999998,
+                "overall_pnl_with_fees": 232.63000000000002,
+                "biggest_net_gain": 1616.24,
+                "total_fees_paid": 1574.4699999999996,
+                "biggest_net_loss": -552.36
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8845437616387337
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=5",
+            "last_trade_exit_time": 1765561590,
+            "aggregation_id": 329,
+            "updated_at": 1765561848.786881,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 35.3266666666667,
+                "win_rate": 35.54216867469879,
+                "avg_losers_net_pnl": -42.6729906542056
+            },
+            "model_id": "kimi-k2-thinking",
+            "last_convo_doc_id": "kimi-k2-thinking_1765501063.518696",
+            "last_trade_doc_id": "run_5_82ec706f-ced8-46d9-99e9-149d1cfc0896",
+            "last_convo_timestamp": 1765501063.518227,
+            "run_id": 5,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 129.5642904953146,
+                "avg_convo_leverage": 9.21380981223501,
+                "median_convo_leverage": 10,
+                "total_trades": 498,
+                "avg_size_of_trade_notional": 6625.973147791158,
+                "median_size_of_trade_notional": 3996.38915,
+                "median_holding_period_mins": 35.925
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 305,
+                "num_long_signals": 1346,
+                "num_hold_signals": 7850,
+                "avg_confidence": 0.3243908528060674,
+                "pct_mins_flat_combined": 60.1994553285237,
+                "total_signals": 10014,
+                "num_close_signals": 513,
+                "pct_mins_short_combined": 7.493980793809088,
+                "pct_mins_long_combined": 32.306563877667216
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -4274.579999999997,
+                "overall_pnl_with_fees": -7445.210000000003,
+                "biggest_net_gain": 1006.61,
+                "total_fees_paid": 2113.7699999999995,
+                "biggest_net_loss": -1168.05
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7369477911646586
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=6",
+            "last_trade_exit_time": 1765561579,
+            "aggregation_id": 329,
+            "updated_at": 1765561866.004814,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 44.81685534591193,
+                "win_rate": 31.485148514851485,
+                "avg_losers_net_pnl": -26.623554913294818
+            },
+            "model_id": "kimi-k2-thinking",
+            "last_convo_doc_id": "kimi-k2-thinking_1765501725.888376",
+            "last_trade_doc_id": "run_6_bcef685f-b093-4f2c-b318-29af42c0fb6a",
+            "last_convo_timestamp": 1765501725.887743,
+            "run_id": 6,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 86.30884488448847,
+                "avg_convo_leverage": 8.456436420722135,
+                "median_convo_leverage": 10,
+                "total_trades": 505,
+                "avg_size_of_trade_notional": 7253.0410661386095,
+                "median_size_of_trade_notional": 4499.385,
+                "median_holding_period_mins": 33.483333333333334
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.8,
+                "num_short_signals": 254,
+                "num_long_signals": 1020,
+                "num_hold_signals": 3639,
+                "avg_confidence": 0.7106478102189774,
+                "pct_mins_flat_combined": 80.68661070082939,
+                "total_signals": 5480,
+                "num_close_signals": 567,
+                "pct_mins_short_combined": 5.977402603470434,
+                "pct_mins_long_combined": 13.335986695700159
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": 659.380000000001,
+                "overall_pnl_with_fees": -2085.8700000000013,
+                "biggest_net_gain": 1006.05,
+                "total_fees_paid": 1830.2899999999984,
+                "biggest_net_loss": -478.5
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7267326732673267
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=7",
+            "last_trade_exit_time": 1765561569,
+            "aggregation_id": 4,
+            "updated_at": 1765561884.156566,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 43.02565714285719,
+                "win_rate": 35.35353535353536,
+                "avg_losers_net_pnl": -41.59378124999999
+            },
+            "model_id": "x-ai/grok-4",
+            "last_convo_doc_id": "grok-4_1765501284.347004",
+            "last_trade_doc_id": "run_7_c23cef2f-3af5-43f4-9c4c-09001ab3ce45",
+            "last_convo_timestamp": 1765501284.346727,
+            "run_id": 7,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 205.33673400673374,
+                "avg_convo_leverage": 10.260352213231794,
+                "median_convo_leverage": 10,
+                "total_trades": 495,
+                "avg_size_of_trade_notional": 4346.408107070707,
+                "median_size_of_trade_notional": 1504.5872,
+                "median_holding_period_mins": 36.4
+            },
+            "competition_id": 1,
+            "signals_breakdown_table": {
+                "median_confidence": 0,
+                "num_short_signals": 534,
+                "num_long_signals": 1567,
+                "num_hold_signals": 9231,
+                "avg_confidence": 0.3343569958847633,
+                "pct_mins_flat_combined": 23.008482923968486,
+                "total_signals": 11664,
+                "num_close_signals": 331,
+                "pct_mins_short_combined": 27.1449347515065,
+                "pct_mins_long_combined": 49.846582324525016
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -3509.170000000003,
+                "overall_pnl_with_fees": -5780.519999999998,
+                "biggest_net_gain": 2421.31,
+                "total_fees_paid": 1514.2199999999978,
+                "biggest_net_loss": -1452.52
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.8101010101010101
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=8",
+            "last_trade_exit_time": 1765561540,
+            "aggregation_id": 4,
+            "updated_at": 1765561900.496665,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 45.337116564417194,
+                "win_rate": 37.12984054669704,
+                "avg_losers_net_pnl": -45.876340579710224
+            },
+            "model_id": "x-ai/grok-4",
+            "last_convo_doc_id": "grok-4_1765501865.004454",
+            "last_trade_doc_id": "run_8_833071d2-1550-4066-acf3-ad0f7ac461a4",
+            "last_convo_timestamp": 1765501865.004129,
+            "run_id": 8,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 211.36723614274862,
+                "avg_convo_leverage": 9.60540223135643,
+                "median_convo_leverage": 10,
+                "total_trades": 439,
+                "avg_size_of_trade_notional": 5070.753403872435,
+                "median_size_of_trade_notional": 2430.8,
+                "median_holding_period_mins": 38.35
+            },
+            "competition_id": 2,
+            "signals_breakdown_table": {
+                "median_confidence": 0.8,
+                "num_short_signals": 312,
+                "num_long_signals": 1391,
+                "num_hold_signals": 25674,
+                "avg_confidence": 0.7078789843327163,
+                "pct_mins_flat_combined": 35.00644949228027,
+                "total_signals": 27765,
+                "num_close_signals": 388,
+                "pct_mins_short_combined": 20.780439967744186,
+                "pct_mins_long_combined": 44.21311053997555
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -3766.4500000000007,
+                "overall_pnl_with_fees": -5271.920000000001,
+                "biggest_net_gain": 1557.93,
+                "total_fees_paid": 1003.6199999999977,
+                "biggest_net_loss": -1733.43
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.715261958997722
+            },
+            "user_id": "all"
+        },
+        {
+            "id": "run_id=9",
+            "last_trade_exit_time": 1765561513,
+            "aggregation_id": 4,
+            "updated_at": 1765561920.11605,
+            "winners_losers_breakdown_table": {
+                "avg_winners_net_pnl": 13.213693181818199,
+                "win_rate": 32.83582089552239,
+                "avg_losers_net_pnl": -19.810472222222238
+            },
+            "model_id": "x-ai/grok-4",
+            "last_convo_doc_id": "grok-4_1765501766.71424",
+            "last_trade_doc_id": "run_9_e3eb1eb5-8bf4-479e-85c0-9b0ea7f38305",
+            "last_convo_timestamp": 1765501766.713753,
+            "run_id": 9,
+            "overall_trades_overview_table": {
+                "avg_holding_period_mins": 64.59068718905479,
+                "avg_convo_leverage": 11.217864923747277,
+                "median_convo_leverage": 10,
+                "total_trades": 1072,
+                "avg_size_of_trade_notional": 3511.7642016790996,
+                "median_size_of_trade_notional": 1017.5861,
+                "median_holding_period_mins": 26.883333333333333
+            },
+            "competition_id": 3,
+            "signals_breakdown_table": {
+                "median_confidence": 0.7,
+                "num_short_signals": 1350,
+                "num_long_signals": 4617,
+                "num_hold_signals": 12451,
+                "avg_confidence": 0.4323057605576359,
+                "pct_mins_flat_combined": 50.8890285584642,
+                "total_signals": 19512,
+                "num_close_signals": 1092,
+                "pct_mins_short_combined": 12.467298564522485,
+                "pct_mins_long_combined": 36.64367287701331
+            },
+            "fee_pnl_moves_breakdown_table": {
+                "overall_pnl_without_fees": -4330.189999999993,
+                "overall_pnl_with_fees": -9612.320000000002,
+                "biggest_net_gain": 1845.64,
+                "total_fees_paid": 3521.330000000021,
+                "biggest_net_loss": -2022.03
+            },
+            "longs_shorts_breakdown_table": {
+                "long_short_trades_ratio": 0.7705223880597015
+            },
+            "user_id": "all"
+        }
+    ],
+    "serverTime": 1767235488728
+}
