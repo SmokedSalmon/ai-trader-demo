@@ -1,0 +1,4 @@
+export async function GET(){
+    const dummyData = (await import('mock/local-run/check-mainnet-accounts.json')).default
+    return Response.json(dummyData)
+}

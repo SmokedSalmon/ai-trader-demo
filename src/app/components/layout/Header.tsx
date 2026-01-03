@@ -42,7 +42,7 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
 
   // Preload VIP icons so dropdown renders instantly
   useEffect(() => {
-    ;['/static/vip_logo.png', '/static/vip_no.png'].forEach((src) => {
+    ;['/vip_logo.png', '/vip_no.png'].forEach((src) => {
       const img = new Image()
       img.src = src
     })
@@ -74,7 +74,7 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
     <header className="w-full border-b bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="w-full py-2 px-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src="/static/logo_app.png" alt="Logo" className="h-8 w-8 object-contain" />
+          <img src="/logo_app.png" alt="Logo" className="h-8 w-8 object-contain" />
           <h1 className="text-xl font-bold">{title}</h1>
 
           {/* Exchanges Button */}
@@ -143,7 +143,7 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
                     {/* Membership Status */}
                     {membership && membership.status === 'ACTIVE' ? (
                       <DropdownMenuItem className="cursor-default">
-                        <img src="/static/vip_logo.png" alt="VIP" className="mr-2 h-4 w-4" />
+                        <img src="/vip_logo.png" alt="VIP" className="mr-2 h-4 w-4" />
                         <div className="flex flex-col">
                           <span className="text-sm font-medium text-yellow-600">VIP Member</span>
                           <span className="text-xs text-muted-foreground">
@@ -154,7 +154,7 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
                       </DropdownMenuItem>
                     ) : (
                       <DropdownMenuItem onClick={openPricingPage}>
-                        <img src="/static/vip_no.png" alt="Upgrade" className="mr-2 h-4 w-4" />
+                        <img src="/vip_no.png" alt="Upgrade" className="mr-2 h-4 w-4" />
                         <span>Upgrade to VIP</span>
                         <ExternalLink className="ml-auto h-3 w-3" />
                       </DropdownMenuItem>

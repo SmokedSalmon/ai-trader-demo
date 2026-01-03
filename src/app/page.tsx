@@ -5,14 +5,14 @@ import './index.css'
 import { Toaster, toast } from 'react-hot-toast'
 
 // Global error handler for debugging
-window.addEventListener('error', (event) => {
-  console.error('Global error caught:', event.error)
-  console.error('Error stack:', event.error?.stack)
-})
+// window.addEventListener('error', (event) => {
+//   console.error('Global error caught:', event.error)
+//   console.error('Error stack:', event.error?.stack)
+// })
 
-window.addEventListener('unhandledrejection', (event) => {
-  console.error('Unhandled promise rejection:', event.reason)
-})
+// window.addEventListener('unhandledrejection', (event) => {
+//   console.error('Unhandled promise rejection:', event.reason)
+// })
 
 // Create a module-level WebSocket singleton to avoid duplicate connections in React StrictMode
 let __WS_SINGLETON__: WebSocket | null = null;
@@ -41,6 +41,8 @@ import { ArenaDataProvider } from '@/contexts/ArenaDataContext'
 import { TradingModeProvider, useTradingMode } from '@/contexts/TradingModeContext'
 import { AuthProvider, useAuth } from '@/contexts/AuthContext'
 import { ExchangeProvider } from '@/contexts/ExchangeContext'
+
+import { connect } from './contexts/MockedWebsocket'
 
 interface User {
   id: number
@@ -260,7 +262,8 @@ function App() {
     
     const connectWebSocket = () => {
       try {
-        ws = new WebSocket(resolveWsUrl())
+        // ws = new WebSocket(resolveWsUrl())
+        ws = connect()
         __WS_SINGLETON__ = ws
         wsRef.current = ws
         
@@ -722,8 +725,9 @@ function App() {
   )
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+export default function Main()
+{
+  return (
     <AuthProvider>
       <ExchangeProvider>
         <TradingModeProvider>
@@ -734,5 +738,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </TradingModeProvider>
       </ExchangeProvider>
     </AuthProvider>
-  </React.StrictMode>,
-)
+  )
+}

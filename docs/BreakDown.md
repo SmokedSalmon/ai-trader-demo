@@ -62,7 +62,7 @@ Tabs uses `components/ui/tabs.tsx`
 
 ## API Breakdown
 
-### `/api/hyperliquid/accounts/1/balance`
+### `/api/hyperliquid/accounts/[account_id]/balance`
 Dashboard page, bottom left Account Status section data source
 
 ### `/api/arena/trades`
@@ -111,7 +111,7 @@ with params:
   When empty, it fetches all chart data of all traders/accounts
 
 
-### `/api/arena/model-chat/1424/snapshots`
+### `/api/arena/model-chat/[id]/snapshots`
 upon click to expend each AI Trader decision under `MODELCHAT` for the 1st time
 
 
