@@ -99,7 +99,7 @@ export default function HyperliquidPage() {
               />
 
               <div className="space-y-6">
-                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-100">
+                <div className="bg-linear-to-r from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-100">
                   <h3 className="text-lg font-semibold mb-3">Quick Stats</h3>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
@@ -113,7 +113,7 @@ export default function HyperliquidPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-100">
+                <div className="bg-linear-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-100">
                   <h3 className="text-lg font-semibold mb-3">Risk Management</h3>
                   <ul className="space-y-2 text-sm text-gray-700">
                     <li>• Start with lower leverage (2-3x)</li>

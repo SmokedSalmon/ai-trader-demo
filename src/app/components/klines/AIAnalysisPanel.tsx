@@ -621,7 +621,7 @@ export default function AIAnalysisPanel({
           </DialogHeader>
           <div className="space-y-3">
             <div className="rounded-md border p-4 bg-background">
-              <div className="prose prose-sm md:prose-base max-w-none break-words">
+              <div className="prose prose-sm md:prose-base max-w-none wrap-break-word">
                 <ReactMarkdown>
                   {result?.analysis || ''}
                 </ReactMarkdown>
@@ -642,7 +642,7 @@ export default function AIAnalysisPanel({
                 </div>
                 {showPrompt && (
                   <div className="mt-2 max-h-60 overflow-auto rounded border bg-background p-2">
-                    <pre className="whitespace-pre-wrap text-[11px] text-foreground break-words">{result.prompt}</pre>
+                    <pre className="whitespace-pre-wrap text-[11px] text-foreground wrap-break-word">{result.prompt}</pre>
                   </div>
                 )}
               </div>

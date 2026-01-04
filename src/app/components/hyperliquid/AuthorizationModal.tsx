@@ -115,7 +115,7 @@ export default function AuthorizationModal({
   }
 
   return createPortal(
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center">
       <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={handleClose}
@@ -134,7 +134,7 @@ export default function AuthorizationModal({
               size="sm"
               onClick={handleClose}
               disabled={closing}
-              className="h-8 w-8 p-0 flex-shrink-0 ml-2"
+              className="h-8 w-8 p-0 shrink-0 ml-2"
             >
               {closing ? <Loader2 className="h-4 w-4 animate-spin" /> : <X className="h-4 w-4" />}
             </Button>
@@ -171,7 +171,7 @@ export default function AuthorizationModal({
                 {(state.error || account.error_message) && (
                   <div className="text-sm text-red-600 dark:text-red-400 mb-3 p-3 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded">
                     <p className="font-medium mb-1">Authorization Error:</p>
-                    <p className="text-xs break-words">{state.error || account.error_message}</p>
+                    <p className="text-xs wrap-break-word">{state.error || account.error_message}</p>
                   </div>
                 )}
 

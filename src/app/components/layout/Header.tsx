@@ -71,7 +71,7 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
   }
 
   return (
-    <header className="w-full border-b bg-background/50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="w-full border-b bg-background/50 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="w-full py-2 px-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img src="/logo_app.png" alt="Logo" className="h-8 w-8 object-contain" />
@@ -109,7 +109,7 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="relative h-9 w-9 rounded-full p-0">
-                      <div className={`relative rounded-full ${isVipMember ? 'p-[3px] bg-gradient-to-br from-yellow-200 via-amber-500 to-orange-600 shadow-[0_0_18px_rgba(202,138,4,0.85)]' : ''}`}>
+                      <div className={`relative rounded-full ${isVipMember ? 'p-[3px] bg-linear-to-br from-yellow-200 via-amber-500 to-orange-600 shadow-[0_0_18px_rgba(202,138,4,0.85)]' : ''}`}>
                         {isVipMember && (
                           <>
                             <span className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.55),transparent_60%)] opacity-90 blur-[1px]" aria-hidden="true" />

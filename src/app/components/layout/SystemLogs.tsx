@@ -379,7 +379,7 @@ useEffect(() => {
                                   {formatTimestamp(log.timestamp)}
                                 </span>
                               </div>
-                              <p className="text-sm break-words">{log.message}</p>
+                              <p className="text-sm wrap-break-word">{log.message}</p>
                               {log.details && Object.keys(log.details).length > 0 && (
                                 <details className="mt-2">
                                   <summary className="text-xs text-muted-foreground cursor-pointer hover:text-foreground">

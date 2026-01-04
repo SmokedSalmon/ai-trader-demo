@@ -935,7 +935,7 @@ export default function AlphaArenaFeed({
                                         </div>
                                       ) : displayContent ? (
                                         <>
-                                          <pre className="whitespace-pre-wrap break-words font-mono text-[11px] leading-relaxed text-foreground/90">
+                                          <pre className="whitespace-pre-wrap wrap-break-word font-mono text-[11px] leading-relaxed text-foreground/90">
                                             {displayContent}
                                           </pre>
                                           <div className="mt-3 flex justify-end">

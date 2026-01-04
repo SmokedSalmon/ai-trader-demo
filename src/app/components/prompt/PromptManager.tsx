@@ -443,7 +443,7 @@ export default function PromptManager() {
                 </div>
               </div>
             </CardHeader>
-            <CardContent className="flex flex-col gap-4 h-[100%] flex-1 overflow-hidden">
+            <CardContent className="flex flex-col gap-4 h-full flex-1 overflow-hidden">
               {/* Template Selection Dropdown */}
               <div>
                 <label className="text-xs uppercase text-muted-foreground">Template</label>
@@ -512,7 +512,7 @@ export default function PromptManager() {
                   <Button
                     onClick={handleAiWriteClick}
                     disabled={!selectedTemplate || saving}
-                    className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-lg hover:shadow-xl transition-all"
+                    className="bg-linear-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-lg hover:shadow-xl transition-all"
                   >
                     ✨ AI Write Strategy Prompt
                   </Button>
@@ -535,7 +535,7 @@ export default function PromptManager() {
         </div>
 
         {/* RIGHT COLUMN - Binding Management */}
-        <Card className="flex flex-col w-full lg:w-[40rem] flex-shrink-0 overflow-hidden">
+        <Card className="flex flex-col w-full lg:w-160 shrink-0 overflow-hidden">
           <CardHeader>
             <CardTitle className="text-base">Account Prompt Bindings</CardTitle>
           </CardHeader>
@@ -781,8 +781,8 @@ export default function PromptManager() {
 
           <div className="flex-1 flex gap-4 overflow-hidden">
             {/* Left Sidebar - AI Prompt CTA */}
-            <div className="w-56 flex-shrink-0">
-              <div className="bg-gradient-to-b from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border border-purple-200 dark:border-purple-800 rounded-lg p-4 h-full flex flex-col">
+            <div className="w-56 shrink-0">
+              <div className="bg-linear-to-b from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border border-purple-200 dark:border-purple-800 rounded-lg p-4 h-full flex flex-col">
                 <div className="text-2xl mb-3">✨</div>
                 <p className="text-sm font-medium text-foreground mb-3">
                   Need help writing prompts?
@@ -805,7 +805,7 @@ export default function PromptManager() {
                     setVariablesRefModalOpen(false)
                     handleAiWriteClick()
                   }}
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-md hover:shadow-lg transition-all text-xs"
+                  className="w-full bg-linear-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-md hover:shadow-lg transition-all text-xs"
                 >
                   ✨ Try AI Write
                 </Button>

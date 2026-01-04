@@ -328,7 +328,7 @@ export default function WalletConfigPanel({
                   className="cursor-pointer"
                   title="复制钱包地址"
                 >
-                  <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
                 </button>
               </div>
             </div>

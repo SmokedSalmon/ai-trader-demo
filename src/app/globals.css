@@ -1,26 +1,279 @@
 @import "tailwindcss";
+@import "tailwind-animate";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* --- Fonts --- */
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* --- Border Radius --- */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* --- Colors --- */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  /* --- Keyframes --- */
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+  @keyframes highlight-flash {
+    0%, 100% { background-color: transparent; box-shadow: none; }
+    50% { background-color: rgba(34, 197, 94, 0.15); box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+  }
+  @keyframes number-up {
+    0% { color: inherit; transform: scale(1); }
+    50% { color: rgb(34, 197, 94); transform: scale(1.05); }
+    100% { color: inherit; transform: scale(1); }
+  }
+  @keyframes number-down {
+    0% { color: inherit; transform: scale(1); }
+    50% { color: rgb(239, 68, 68); transform: scale(1.05); }
+    100% { color: inherit; transform: scale(1); }
+  }
+  @keyframes slide-in-top {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes flip-digit {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0deg); }
+  }
+  @keyframes logo-blink {
+    0%, 100% { opacity: 1; transform: scale(1); filter: brightness(1); }
+    25% { opacity: 0.7; transform: scale(1.1); filter: brightness(1.3); }
+    50% { opacity: 1; transform: scale(1.05); filter: brightness(1.1); }
+    75% { opacity: 0.8; transform: scale(1.02); filter: brightness(1.2); }
+  }
+  @keyframes fade-out-trader {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.1; transform: scale(0.95); }
+  }
+  @keyframes fade-in-trader {
+    0% { opacity: 0.1; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  @keyframes highlight-trader {
+    0% { opacity: 0.3; transform: scale(0.98); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  /* --- Animations --- */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-highlight: highlight-flash 1s ease-in-out 3;
+  --animate-number-up: number-up 0.6s ease;
+  --animate-number-down: number-down 0.6s ease;
+  --animate-slide-in: slide-in-top 0.3s ease-out;
+  --animate-logo-blink: logo-blink 1.2s ease-in-out;
+  --animate-ping-logo: ping 1s cubic-bezier(0, 0, 0.2, 1) 3;
+  --animate-trader-fade-out: fade-out-trader 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  --animate-trader-fade-in: fade-in-trader 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  --animate-trader-highlight: highlight-trader 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: var(--foreground);
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: var(--foreground);
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-mono);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* --- Sharp Corners Overrides --- */
+  .rounded-none,
+  [class*="rounded"],
+  .btn,
+  button,
+  input,
+  textarea,
+  select,
+  [data-radix-select-trigger],
+  [data-radix-select-content],
+  .card,
+  .dialog-content,
+  .drawer-content,
+  table, th, td {
+    border-radius: 0 !important;
+  }
+
+  /* --- Global Border Color Logic --- */
+  .border:not(.text-card-foreground):not(.text-popover-foreground):not(.text-destructive-foreground):not(.text-muted-foreground):not(.bg-background) {
+    border-color: hsl(340.99deg 10.3% 57.34%) !important;
+  }
+
+  /* --- Input/UI Elements --- */
+  input, textarea, select {
+    border: 1px solid hsl(var(--border)) !important;
+    font-family: var(--font-mono);
+  }
+
+  .btn, button {
+    font-family: var(--font-mono);
+  }
+
+  /* --- Data Visuals & Animations --- */
+  .number-increasing { @apply animate-number-up; }
+  .number-decreasing { @apply animate-number-down; }
+  .slide-in { @apply animate-slide-in; }
+  .logo-blink { @apply animate-logo-blink; }
+
+  .animated-number {
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .flip-number-container {
+    display: inline-flex;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.05em;
+  }
+
+  .flip-digit {
+    display: inline-block;
+    min-width: 0.6em;
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 300px;
+    transition: transform 0.9s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+
+  .flip-digit.flipping {
+    animation: flip-digit 0.9s cubic-bezier(0.4, 0.0, 0.2, 1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* --- Recharts Clean-up --- */
+  .recharts-line {
+    transition: stroke-opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+                stroke-width 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+  }
+
+  .recharts-cartesian-axis-tick {
+    transition: opacity 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+  }
+
+  .recharts-wrapper, .recharts-wrapper *, svg:focus, svg *:focus {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
 }

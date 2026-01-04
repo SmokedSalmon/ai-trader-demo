@@ -829,7 +829,7 @@ export default function SignalManager() {
             <Button
               onClick={() => setAiChatOpen(true)}
               size="sm"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-lg hover:shadow-xl transition-all"
+              className="bg-linear-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-lg hover:shadow-xl transition-all"
             >
               <Sparkles className="w-4 h-4 mr-2" />AI Set Signal
             </Button>

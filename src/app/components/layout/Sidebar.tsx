@@ -86,7 +86,7 @@ export default function Sidebar({ currentPage = 'comprehensive', onPageChange, o
                 onClick={() => onPageChange?.(item.page)}
                 title={item.label}
               >
-                <Icon className="w-5 h-5 flex-shrink-0" />
+                <Icon className="w-5 h-5 shrink-0" />
                 <span>{item.label}</span>
               </button>
             )
@@ -97,7 +97,7 @@ export default function Sidebar({ currentPage = 'comprehensive', onPageChange, o
             onClick={() => window.open(communityLink, '_blank', 'noopener,noreferrer')}
             title="Telegram Community"
           >
-            <CommunityIcon className="w-5 h-5 flex-shrink-0" />
+            <CommunityIcon className="w-5 h-5 shrink-0" />
             <span>Community</span>
           </button>
         </nav>

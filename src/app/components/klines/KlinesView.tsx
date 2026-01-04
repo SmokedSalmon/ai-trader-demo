@@ -268,8 +268,8 @@ export default function KlinesView({ onAccountUpdated }: KlinesViewProps) {
   return (
     <div className="flex h-full w-full gap-4 overflow-hidden">
       {/* 左侧 70%：选择区 + 市场数据 + 指标 + K线图 */}
-      <div className="flex flex-col flex-[7] min-w-0 space-y-4 overflow-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-3 flex-shrink-0">
+      <div className="flex flex-col flex-7 min-w-0 space-y-4 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-3 shrink-0">
           {/* Symbol and Period Selection */}
           <Card className="lg:col-span-2">
             <CardContent className="pt-4 space-y-3">
@@ -585,7 +585,7 @@ export default function KlinesView({ onAccountUpdated }: KlinesViewProps) {
       </div>
 
       {/* 右侧 30%：AI Analysis 独立列 */}
-      <div className="flex flex-col flex-[3] min-w-[300px] space-y-4">
+      <div className="flex flex-col flex-3 min-w-[300px] space-y-4">
         <Card className="flex-1 overflow-hidden">
           <CardHeader className="py-3">
             <CardTitle className="text-sm">AI Analysis</CardTitle>

@@ -85,7 +85,7 @@ export default function WalletApiUsage({ accountId, environment }: WalletApiUsag
   };
 
   return (
-    <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-100">
+    <div className="bg-linear-to-r from-green-50 to-emerald-50 p-6 rounded-lg border border-green-100">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold">Wallet API Usage</h3>
         <Button
@@ -143,7 +143,7 @@ export default function WalletApiUsage({ accountId, environment }: WalletApiUsag
           {/* Over Limit Warning */}
           {rateLimit.isOverLimit && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start space-x-3">
-              <AlertTriangle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+              <AlertTriangle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold text-red-800 mb-1">
                   ⚠️ API Quota Exceeded
@@ -162,7 +162,7 @@ export default function WalletApiUsage({ accountId, environment }: WalletApiUsag
           {/* Information Section */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <div className="flex items-start space-x-3">
-              <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+              <Info className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
               <div className="text-xs text-gray-700 space-y-2">
                 <p>
                   <strong>What is this?</strong> Hyperliquid uses address-based request quotas to prevent API abuse.

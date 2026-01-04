@@ -217,7 +217,7 @@ export default function PromptPreviewDialog({
               </div>
             ) : (
               <Tabs defaultValue={`${previews[0].accountId}`} className="flex-1 flex flex-col">
-                <TabsList className="w-full justify-start overflow-x-auto flex-shrink-0">
+                <TabsList className="w-full justify-start overflow-x-auto shrink-0">
                   {previews.map((preview) => (
                     <TabsTrigger
                       key={preview.accountId}
@@ -254,7 +254,7 @@ export default function PromptPreviewDialog({
                     </div>
 
                     <ScrollArea className="flex-1 p-4">
-                      <pre className="text-xs font-mono whitespace-pre-wrap break-words">
+                      <pre className="text-xs font-mono whitespace-pre-wrap wrap-break-word">
                         {preview.filledPrompt}
                       </pre>
                     </ScrollArea>

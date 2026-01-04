@@ -371,7 +371,7 @@ export default function PremiumFeaturesView({ onAccountUpdated, onPageChange }: 
 
                   <Button
                     onClick={handlePromptToolClick}
-                    className="w-full h-8 text-xs bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0"
+                    className="w-full h-8 text-xs bg-linear-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0"
                   >
                     <Sparkles className="w-3 h-3 mr-1" />
                     Start Write Strategy Prompt
@@ -551,7 +551,7 @@ export default function PremiumFeaturesView({ onAccountUpdated, onPageChange }: 
 
                   <Button
                     onClick={() => onPageChange?.('signal-management')}
-                    className="w-full h-8 text-xs bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white border-0"
+                    className="w-full h-8 text-xs bg-linear-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white border-0"
                   >
                     <Zap className="w-3 h-3 mr-1" />
                     Create Signal with AI

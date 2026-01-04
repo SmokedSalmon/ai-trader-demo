@@ -45,7 +45,7 @@ export default function TraderManagement() {
   if (hasOnlyDefaultAccount) {
     return (
       <div className="h-full w-full overflow-hidden flex flex-col gap-4 p-6">
-        <div className="flex-shrink-0">
+        <div className="shrink-0">
           <h1 className="text-2xl font-bold">Welcome to Hyper Alpha Arena!</h1>
           <p className="text-muted-foreground">Let's set up your first AI trader</p>
         </div>
@@ -81,7 +81,7 @@ export default function TraderManagement() {
 
   return (
     <div className="h-full w-full overflow-hidden flex flex-col gap-4 p-6">
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <h1 className="text-2xl font-bold">AI Trader Management</h1>
         <p className="text-muted-foreground">Manage your AI traders and configure trading strategies</p>
       </div>

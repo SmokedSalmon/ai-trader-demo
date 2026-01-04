@@ -136,7 +136,7 @@ export default function TradingModeSwitch() {
         /* Confirmation Dialog */
         <div className="p-4 border-2 border-orange-500 rounded-lg space-y-3">
           <div className="flex items-start gap-2">
-            <AlertTriangle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
+            <AlertTriangle className="h-5 w-5 text-orange-500 shrink-0 mt-0.5" />
             <div className="flex-1">
               <div className="font-medium text-orange-700">
                 {targetMode === 'mainnet'
