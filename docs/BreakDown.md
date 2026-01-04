@@ -75,6 +75,8 @@ with params:
 - `limit`: number
 - `account_id`  
   When empty, it fetches all trades of all traders/accounts
+- `symbol`: string
+  When empty, it fetches all trades of all symbols
 - `trading_mode`: `testnet` or `mainnet`
 
 
@@ -84,6 +86,8 @@ with params:
 - `limit`: number
 - `account_id`  
   When empty, it fetches all decisions of all traders/accounts
+- `symbol`: string
+  When empty, it fetches all decisions of of all symbols
 - `trading_mode`: `testnet` or `mainnet`
 
 ### `/api/arena/positions`
