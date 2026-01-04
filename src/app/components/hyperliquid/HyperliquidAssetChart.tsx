@@ -385,7 +385,7 @@ export default function HyperliquidAssetChart({
         const labelY = cy - 18
 
         return (
-          <g>
+          <g key={account.account_id}>
             {pulseIteration > 0 && (
               <circle
                 cx={cx}
@@ -415,7 +415,7 @@ export default function HyperliquidAssetChart({
                 }}
               >
                 <img
-                  src={account.logo?.src}
+                  src={account.logo?.src?.src}
                   alt={account.logo?.alt}
                   style={{
                     width: size - 6,
