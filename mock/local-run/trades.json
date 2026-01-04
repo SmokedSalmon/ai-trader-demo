@@ -1,5 +1,5 @@
 {
-    "generated_at": "2025-12-31T10:39:11.802121",
+    "generated_at": "2026-01-04T04:35:49.283257",
     "accounts": [
         {
             "account_id": 1,
@@ -8,6 +8,60 @@
         }
     ],
     "trades": [
+        {
+            "trade_id": 10,
+            "order_id": null,
+            "order_no": "46018834976",
+            "account_id": 1,
+            "account_name": "MVP Trail",
+            "model": "deepseek-chat",
+            "side": "BUY",
+            "direction": "LONG",
+            "symbol": "BTC",
+            "market": "HYPERLIQUID_PERP",
+            "price": 91554.0,
+            "quantity": 0.00063,
+            "notional": 57.67902,
+            "commission": 0.0,
+            "trade_time": "2026-01-04T00:56:34.256337",
+            "wallet_address": "0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4"
+        },
+        {
+            "trade_id": 9,
+            "order_id": null,
+            "order_no": "46011127427",
+            "account_id": 1,
+            "account_name": "MVP Trail",
+            "model": "deepseek-chat",
+            "side": "BUY",
+            "direction": "LONG",
+            "symbol": "SOL",
+            "market": "HYPERLIQUID_PERP",
+            "price": 131.65,
+            "quantity": 0.55,
+            "notional": 72.4075,
+            "commission": 0.0,
+            "trade_time": "2026-01-03T21:23:18.999825",
+            "wallet_address": "0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4"
+        },
+        {
+            "trade_id": 8,
+            "order_id": null,
+            "order_no": "46006193059",
+            "account_id": 1,
+            "account_name": "MVP Trail",
+            "model": "deepseek-chat",
+            "side": "SELL",
+            "direction": "SHORT",
+            "symbol": "SPX",
+            "market": "HYPERLIQUID_PERP",
+            "price": 0.55275,
+            "quantity": 79.8,
+            "notional": 44.10945,
+            "commission": 0.0,
+            "trade_time": "2026-01-03T18:22:00.994487",
+            "wallet_address": "0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4"
+        },
         {
             "trade_id": 7,
             "order_id": null,
