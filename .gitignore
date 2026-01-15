@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# snapshots, crawl results
+/.snapshots
+
 # next.js
 /.next/
 /out/

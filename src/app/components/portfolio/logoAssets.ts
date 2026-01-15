@@ -14,6 +14,14 @@ import geminiChartLogo from '@/components/ui/public/Gemini_logo_chart.webp'
 import grokChartLogo from '@/components/ui/public/Grok_logo_chart.webp'
 import defaultChartLogo from '@/components/ui/public/default_chart.webp'
 
+import symbolDefaultIcon from '@/components/ui/public/symbol_default.svg'
+import tslaIcon from '@/components/ui/public/TSLA.svg'
+import ndxIcon from '@/components/ui/public/nasdaq.svg'
+import nvdaIcon from '@/components/ui/public/nvidia.svg'
+import msftIcon from '@/components/ui/public/microsoft.svg'
+import amznIcon from '@/components/ui/public/amazon.svg'
+import googlIcon from '@/components/ui/public/goog.svg'
+import pltrIcon from '@/components/ui/public/palantir.svg'
 import btcIcon from '@/components/ui/public/btc.svg'
 import ethIcon from '@/components/ui/public/eth.svg'
 import xrpIcon from '@/components/ui/public/xrp.svg'
@@ -48,6 +56,16 @@ const modelChartLogoMap: Record<string, LogoAsset> = {
 }
 
 const symbolLogoMap: Record<string, LogoAsset> = {
+  DEFAULT: { src: symbolDefaultIcon, alt: 'Unknown Symbol icon' },
+  // US Stocks
+  TSLA: { src: tslaIcon, alt: 'TSLA icon' },
+  NVDA: { src: nvdaIcon, alt: 'NVDA icon' },
+  MSFT: { src: msftIcon, alt: 'MSFT icon' },
+  AMZN: { src: amznIcon, alt: 'AMZN icon' },
+  GOOGL: { src: googlIcon, alt: 'GOOGL icon' },
+  PLTR: { src: pltrIcon, alt: 'PLTR icon' },
+  NDX: { src: ndxIcon, alt: 'NDX icon' },
+  // Crypto
   BTC: { src: btcIcon, alt: 'BTC icon' },
   ETH: { src: ethIcon, alt: 'ETH icon' },
   XRP: { src: xrpIcon, alt: 'XRP icon' },
@@ -108,6 +126,6 @@ export function getModelColor(name?: string | null) {
 }
 
 export function getSymbolLogo(symbol?: string | null) {
-  if (!symbol) return undefined
+  if (!symbol || !symbolLogoMap[symbol]) return symbolLogoMap.DEFAULT
   return symbolLogoMap[symbol.toUpperCase()]
 }

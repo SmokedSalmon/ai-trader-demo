@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useMemo, useState, useRef, useCallback } from 'react'
+import Image from 'next/image'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   ArenaAccountMeta,
@@ -741,7 +742,7 @@ export default function AlphaArenaFeed({
                         <div className="flex flex-wrap items-center justify-between gap-2 text-xs uppercase tracking-wide text-muted-foreground">
                           <div className="flex items-center gap-2">
                             {modelLogo && (
-                              <img
+                              <Image
                                 src={modelLogo.src}
                                 alt={modelLogo.alt}
                                 className="h-5 w-5 rounded-full object-contain bg-background"
@@ -849,7 +850,7 @@ export default function AlphaArenaFeed({
                         <div className="flex flex-wrap items-center justify-between gap-2 text-xs uppercase tracking-wide text-muted-foreground">
                           <div className="flex items-center gap-2">
                             {modelLogo && (
-                              <img
+                              <Image
                                 src={modelLogo.src}
                                 alt={modelLogo.alt}
                                 className="h-5 w-5 rounded-full object-contain bg-background"

@@ -1,0 +1,18 @@
+{
+    "symbols": [
+        "TSLA",
+        "NDX",
+        "NVDA",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "PLTR",
+        "BTC",
+        "ETH",
+        "SOL",
+        "BNB",
+        "DOGE",
+        "XRP"
+    ],
+    "max_symbols": 12
+}

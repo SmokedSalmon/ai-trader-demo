@@ -1,0 +1,14 @@
+{
+    "environment": "testnet",
+    "account_id": 1,
+    "total_equity": 114941.1844,
+    "available_balance": 58756.502476,
+    "used_margin": 56184.681924,
+    "maintenance_margin": 56184.681924,
+    "margin_usage_percent": 48.88124497523448,
+    "withdrawal_available": 58756.502476,
+    "wallet_address": "0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4",
+    "timestamp": 1768583496307,
+    "source": "cache",
+    "cached_at": "2026-01-16T17:11:36.307000Z"
+}

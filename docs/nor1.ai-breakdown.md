@@ -14,7 +14,7 @@ params:
 `lastHourlyMarker`: number
 
 ### /api/crypto-prices
-Symbol prices at the overview the watching Symbol bar. 
+Symbol prices at the overview the watching Symbol bar (Ticker Bar). 
 It was cryptos but since Season 1.5 it is now Stocks
 
 ### /api/conversations

@@ -1,0 +1,27 @@
+{
+    "symbols": [
+        "TSLA",
+        "NDX",
+        "NVDA",
+        "MSFT",
+        "AMZN",
+        "GOOGL",
+        "PLTR",
+        "AAPL",
+        "AMD",
+        "AUR",
+        "GPRO",
+        "INTC",
+        "LPL",
+        "MBLY",
+        "META",
+        "ORCL",
+        "QCOM",
+        "RBLX",
+        "RIVN",
+        "RR",
+        "SONY",
+        "U"
+    ],
+    "max_symbols": 22
+}

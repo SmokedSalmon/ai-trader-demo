@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { TrendingUp, AlertTriangle } from 'lucide-react'
 import { getHyperliquidBalance } from '@/lib/hyperliquidApi'
+import Image from 'next/image'
 import { getModelLogo } from './logoAssets'
 import type { HyperliquidEnvironment } from '@/lib/types/hyperliquid'
 import type { HyperliquidBalance } from '@/lib/types/hyperliquid'
@@ -215,7 +216,7 @@ export default function HyperliquidMultiAccountSummary({
               {/* Account header with logo */}
               <div className="flex items-center gap-2 pb-2 border-b border-border">
                 {logo && (
-                  <img
+                  <Image
                     src={logo.src}
                     alt={logo.alt}
                     className="h-6 w-6 rounded-full object-contain"

@@ -1,0 +1,70 @@
+{
+    "prices": {
+        "BTC": {
+            "symbol": "BTC",
+            "price": 96299.5,
+            "timestamp": 1768446723886
+        },
+        "ETH": {
+            "symbol": "ETH",
+            "price": 3315.05,
+            "timestamp": 1768446723886
+        },
+        "SOL": {
+            "symbol": "SOL",
+            "price": 144.695,
+            "timestamp": 1768446723886
+        },
+        "BNB": {
+            "symbol": "BNB",
+            "price": 934.365,
+            "timestamp": 1768446723886
+        },
+        "DOGE": {
+            "symbol": "DOGE",
+            "price": 0.144235,
+            "timestamp": 1768446723886
+        },
+        "XRP": {
+            "symbol": "XRP",
+            "price": 2.10525,
+            "timestamp": 1768446723886
+        },
+        "TSLA": {
+            "symbol": "TSLA",
+            "price": 437.945,
+            "timestamp": 1768446723886
+        },
+        "XYZ100": {
+            "symbol": "XYZ100",
+            "price": 25462.5,
+            "timestamp": 1768446723886
+        },
+        "NVDA": {
+            "symbol": "NVDA",
+            "price": 182.725,
+            "timestamp": 1768446723886
+        },
+        "MSFT": {
+            "symbol": "MSFT",
+            "price": 460,
+            "timestamp": 1768446723886
+        },
+        "AMZN": {
+            "symbol": "AMZN",
+            "price": 236.895,
+            "timestamp": 1768446723886
+        },
+        "GOOGL": {
+            "symbol": "GOOGL",
+            "price": 336.59,
+            "timestamp": 1768446723886
+        },
+        "PLTR": {
+            "symbol": "PLTR",
+            "price": 177.41,
+            "timestamp": 1768446723886
+        }
+    },
+    "serverTime": 1768446723886
+}

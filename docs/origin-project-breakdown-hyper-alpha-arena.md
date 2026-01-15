@@ -1,4 +1,6 @@
 
+# Hyper Alpha Arena Simple Breakdowns
+
 ## Page Breakdown
 
 ### `main.tsx`

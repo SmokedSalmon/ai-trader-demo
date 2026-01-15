@@ -42,6 +42,7 @@ import { AuthProvider, useAuth } from '@/contexts/AuthContext'
 import { ExchangeProvider } from '@/contexts/ExchangeContext'
 
 import { connect } from './contexts/MockedWebsocket'
+import SubHeader from './components/hyperliquid/SubHeader';
 
 interface User {
   id: number
@@ -656,6 +657,9 @@ function App() {
             </div>
           ) : (
             <div className="flex flex-col flex-1 min-h-0">
+              {/* Top Panel - Sub header, Tick Bar & Account Brief Summary Bar */}
+              <SubHeader />
+              {/* Rest of the Main Content */}
               <HyperliquidView
                 wsRef={wsRef}
                 refreshKey={hyperliquidRefreshKey}
