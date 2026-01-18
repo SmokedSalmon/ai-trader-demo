@@ -34,7 +34,7 @@ interface HeaderProps {
   showAccountSelector?: boolean
 }
 
-export default function Header({ title = 'Hyper Alpha Arena', currentAccount, showAccountSelector = false }: HeaderProps) {
+export default function Header({ title = 'LLM Trading', currentAccount, showAccountSelector = false }: HeaderProps) {
   const { user, loading, authEnabled, membership, logout } = useAuth()
   const currentExchangeInfo = useCurrentExchangeInfo()
   const [isExchangeModalOpen, setIsExchangeModalOpen] = useState(false)
@@ -72,13 +72,14 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
 
   return (
     <header className="w-full border-b bg-background/50 backdrop-blur supports-backdrop-filter:bg-background/60">
-      <div className="w-full py-2 px-4 flex items-center justify-between">
+      <div className="w-full py-2 px-2 flex items-center justify-between md:py-2 md:px-4">
         <div className="flex items-center gap-3">
-          <img src="/logo_app.png" alt="Logo" className="h-8 w-8 object-contain" />
-          <h1 className="text-xl font-bold">{title}</h1>
+          <img src="/logo_app.svg" alt="Logo" className="h-8 w-8 object-contain" />
+          <h1 className="text-normal font-bold md:text-xl">{title}</h1>
 
           {/* Exchanges Button */}
-          <Button
+          {/* Hide for MVP Demo v1 */}
+          {/* <Button
             variant="outline"
             size="sm"
             onClick={() => setIsExchangeModalOpen(true)}
@@ -94,14 +95,21 @@ export default function Header({ title = 'Hyper Alpha Arena', currentAccount, sh
           </Button>
           {currentExchangeInfo.id === 'hyperliquid' && !isVipMember && (
             <span className="text-xs text-muted-foreground ml-2">Subscribe to Premium for service fee 50% off.</span>
-          )}
+          )} */}
+          <span className="hidden md:inline">
+            <span className="text-base px-1">🔬</span>
+            <span className="text-xs text-muted-foreground">A Single AI LLM Agent starts with $100k</span>
+            <span className="text-base px-1">🧪</span>
+          </span>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 -me-12">
 
           <TradingModeSwitcher />
 
-          {authEnabled && (
+          {/* Hide for MVP Demo v1  */}
+          {/* {authEnabled && ( */}
+          {false && (
             <>
               {loading ? (
                 <div className="w-20 h-9 bg-muted animate-pulse rounded-md" />

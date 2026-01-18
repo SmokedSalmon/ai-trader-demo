@@ -46,6 +46,9 @@
   --color-chart-4: hsl(var(--chart-4));
   --color-chart-5: hsl(var(--chart-5));
 
+  /* --- Breakpoints --- */
+  --breakpoint-cxs: 27rem;
+
   /* --- Keyframes --- */
   @keyframes accordion-down {
     from { height: 0; }
@@ -96,6 +99,20 @@
     0% { opacity: 0.3; transform: scale(0.98); }
     100% { opacity: 1; transform: scale(1); }
   }
+  @keyframes ticker-roller {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes price-up-blink {
+    0% { background-color: transparent; }
+    2% { background-color: var(--color-green-400); }
+    100% { background-color: transparent; }
+  }
+  @keyframes price-down-blink {
+    0% { background-color: transparent; }
+    2% { background-color: var(--color-red-500); }
+    100% { background-color: transparent; }
+  }
 
   /* --- Animations --- */
   --animate-accordion-down: accordion-down 0.2s ease-out;
@@ -109,6 +126,9 @@
   --animate-trader-fade-out: fade-out-trader 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
   --animate-trader-fade-in: fade-in-trader 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
   --animate-trader-highlight: highlight-trader 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+  --animate-ticker-roller: ticker-roller 30s linear infinite;
+  --animate-price-up-blink: price-up-blink 0.3s linear;
+  --animate-price-down-blink: price-down-blink 0.3s linear;
 }
 
 @layer base {
@@ -148,6 +168,11 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+    --terminal-green: #00aa00;
+    --terminal-red: #cc0000;
+    --terminal-yellow: #b8860b;
+    --terminal-blue: #0000aa;
   }
 
   .dark {
@@ -195,12 +220,24 @@
     font-family: var(--font-mono);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
+
+  .terminal-text {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+  .terminal-positive {
+    color: var(--terminal-green);
+  }
+  .terminal-warning {
+    color: var(--terminal-yellow);
+  }
 }
 
 @layer components {
   /* --- Sharp Corners Overrides --- */
   .rounded-none,
-  [class*="rounded"],
+  /* [class*="rounded"], */
   .btn,
   button,
   input,
@@ -275,5 +312,9 @@
   .recharts-wrapper, .recharts-wrapper *, svg:focus, svg *:focus {
     outline: none !important;
     -webkit-tap-highlight-color: transparent !important;
+  }
+
+  svg.recharts-surface {
+    overflow: visible;
   }
 }

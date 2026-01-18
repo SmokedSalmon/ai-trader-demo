@@ -15,6 +15,7 @@
  */
 'use client'
 import React, { useState, useEffect } from 'react'
+import _throttle from 'lodash/throttle'
 import { useTradingMode } from '@/contexts/TradingModeContext'
 import { getArenaPositions, getArenaTrades, ArenaTrade } from '@/lib/api'
 import AlphaArenaFeed from '@/components/portfolio/AlphaArenaFeed'
@@ -34,6 +35,13 @@ export default function HyperliquidView({ wsRef, refreshKey = 0 }: HyperliquidVi
   const [selectedAccount, setSelectedAccount] = useState<number | 'all'>('all')
   const [tradeMarkers, setTradeMarkers] = useState<TradeMarker[]>([])
   const environment = tradingMode === 'testnet' || tradingMode === 'mainnet' ? tradingMode : undefined
+  
+  const [chartOnTop, setChartOnTop] = useState<boolean>(window.innerWidth > 768)
+  useEffect(() => {
+    const handleResize = _throttle(() => setChartOnTop(window.innerWidth > 768), 100)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   // Load data from APIs
   useEffect(() => {
@@ -83,10 +91,10 @@ export default function HyperliquidView({ wsRef, refreshKey = 0 }: HyperliquidVi
   }
 
   return (
-    <div className="grid gap-6 grid-cols-5 h-full min-h-0">
+    <div className="md:grid md:grid-cols-5 flex flex-col h-full min-h-0 relative">
       {/* Left Panel - Chart & Account Summary */}
-      <div className="col-span-3 flex flex-col gap-4 min-h-0">
-        <div className="flex-1 min-h-[320px]">
+      <div className={`md:col-span-3 flex-1 flex flex-col border-r md:min-h-0 z-${chartOnTop ? 10 : 1}`}>
+        <div className="flex-1">
           {positionsData?.accounts?.length > 0 ? (
             <HyperliquidAssetChart
               accountId={firstAccountId}
@@ -101,7 +109,7 @@ export default function HyperliquidView({ wsRef, refreshKey = 0 }: HyperliquidVi
             </div>
           )}
         </div>
-        <div className="border text-card-foreground shadow p-6 space-y-6">
+        <div className="border-0 basis-28 text-card-foreground p-2 md:basis-24">
           <HyperliquidMultiAccountSummary
             accounts={accounts}
             refreshKey={refreshKey + chartRefreshKey}
@@ -111,8 +119,8 @@ export default function HyperliquidView({ wsRef, refreshKey = 0 }: HyperliquidVi
       </div>
 
       {/* Right Panel - Feed */}
-      <div className="col-span-2 flex flex-col min-h-0">
-        <div className="flex-1 min-h-0 border border-border rounded-lg bg-card shadow-sm px-4 py-3 flex flex-col">
+      <div className="md:col-span-2 basis-12 flex flex-col min-h-0 z-5">
+        <div className="flex-1 min-h-0 rounded-lg bg-card shadow-sm flex flex-col">
           <AlphaArenaFeed
             wsRef={wsRef}
             selectedAccount={selectedAccount}

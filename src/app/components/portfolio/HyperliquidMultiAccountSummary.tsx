@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState, useMemo, useCallback } from 'react'
+import NumberFlow from '@number-flow/react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { TrendingUp, AlertTriangle } from 'lucide-react'
@@ -176,23 +177,9 @@ export default function HyperliquidMultiAccountSummary({
     : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-1 h-8 overflow-visible relative">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">Hyperliquid Account Status</h2>
-        <Badge
-          variant={environment === 'testnet' ? 'default' : 'destructive'}
-          className="uppercase text-xs"
-        >
-          {environment}
-        </Badge>
-      </div>
-
-      {globalLastUpdate && (
-        <div className="text-xs text-muted-foreground -mt-2">
-          Last update: {globalLastUpdate}
-        </div>
-      )}
+      
 
       {/* Loading state */}
       {isLoading && (
@@ -211,20 +198,39 @@ export default function HyperliquidMultiAccountSummary({
           return (
             <Card
               key={account.accountId}
-              className="p-4 space-y-3 hover:shadow-md transition-shadow"
+              className="border-0 shadow-none space-y-2"
             >
               {/* Account header with logo */}
-              <div className="flex items-center gap-2 pb-2 border-b border-border">
-                {logo && (
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-6 w-6 rounded-full object-contain"
-                  />
+              <div className="flex justify-between items-center pb-1 border-b-1 border-border">
+                <div className="flex items-center gap-2 pe-4 border-e-1 border-border md:ps-4">
+                  {logo && (
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="h-6 w-6 rounded-full object-contain"
+                    />
+                  )}
+                  <span className="font-semibold text-sm truncate">
+                    {account.accountName}
+                  </span>
+                </div>
+
+                {/* Update Timestamp */}
+                {globalLastUpdate && (
+                  <div className="truncate flex-1 px-3 text-xs text-muted-foreground">
+                    Last update: {globalLastUpdate}
+                  </div>
                 )}
-                <span className="font-semibold text-sm truncate">
-                  {account.accountName}
-                </span>
+
+                <div className="flex items-center justify-between">
+                  {/* <h2 className="text-lg font-semibold">Hyperliquid Account Status</h2> */}
+                  <Badge
+                    variant={environment === 'testnet' ? 'secondary' : 'destructive'}
+                    className="rounded-none uppercase text-[.6rem] text-gray-400 px-2 bg-gray-200"
+                  >
+                    {environment}
+                  </Badge>
+                </div>
               </div>
 
               {/* Error state */}
@@ -234,36 +240,52 @@ export default function HyperliquidMultiAccountSummary({
 
               {/* Balance data */}
               {account.balance && (
-                <>
+                <div className="flex justify-between items-center text-center cxs:text-start">
                   {/* Total Equity */}
-                  <div>
-                    <div className="text-xs text-muted-foreground">Total Equity</div>
-                    <div className="text-lg font-bold">
-                      ${account.balance.totalEquity.toLocaleString('en-US', {
+                  <div className="flex-1 basis-1/2">
+                    <div className="text-xs text-muted-foreground text-start px-2 cxs:px-4">Total Equity</div>
+                    <div className="text-xl font-bold text-start px-2 cxs:px-4 md:text-lg">
+                      {/* ${account.balance.totalEquity.toLocaleString('en-US', {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
-                      })}
+                      })} */}
+                      <NumberFlow
+                        value={account.balance.totalEquity}
+                        format={{ style: 'currency', currency: 'USD', maximumFractionDigits: 2 }}
+                        trend={0}
+                      />
                     </div>
                   </div>
 
                   {/* Used Margin */}
-                  <div>
-                    <div className="text-xs text-muted-foreground">Used Margin</div>
-                    <div className="text-sm font-medium">
-                      ${account.balance.usedMargin.toLocaleString('en-US', {
+                  <div className="flex-1 basis-1/4">
+                    <div className="text-xs text-muted-foreground text-start px-2 cxs:px-4">Used Margin</div>
+                    <div className="text-sm font-medium text-start px-2 cxs:px-4">
+                      {/* ${account.balance.usedMargin.toLocaleString('en-US', {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
-                      })}
+                      })} */}
+                      <NumberFlow
+                        value={account.balance.usedMargin}
+                        format={{ style: 'currency', currency: 'USD', maximumFractionDigits: 2 }}
+                        trend={0}
+                      />
                     </div>
                   </div>
 
                   {/* Margin Usage */}
-                  <div>
-                    <div className="text-xs text-muted-foreground">Margin Usage</div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-medium">
+                  <div className="flex-1 basis-1/4">
+                    <div className="text-xs text-muted-foreground text-start px-2 cxs:px-4">Margin Usage</div>
+                    <div className="flex justify-start items-center gap-2 px-2 cxs:px-4">
+                      {/* <span className="text-sm font-medium">
                         {account.balance.marginUsagePercent.toFixed(1)}%
-                      </span>
+                      </span> */}
+                      <NumberFlow
+                        className="text-sm font-medium"
+                        value={account.balance.marginUsagePercent / 100}
+                        format={{ style: 'percent', maximumFractionDigits: 1 }}
+                        trend={0}
+                      />
                       {marginStatus && StatusIcon && (
                         <div className="flex items-center gap-1">
                           <span
@@ -278,7 +300,8 @@ export default function HyperliquidMultiAccountSummary({
                   </div>
 
                   {/* Wallet Address */}
-                  {account.balance.walletAddress && (
+                  {/* Hide for MVP Demo v1 */}
+                  {/* {account.balance.walletAddress && (
                     <div>
                       <div className="text-xs text-muted-foreground">Wallet</div>
                       <div className="text-xs font-mono truncate">
@@ -286,8 +309,8 @@ export default function HyperliquidMultiAccountSummary({
                         {account.balance.walletAddress.slice(-4)}
                       </div>
                     </div>
-                  )}
-                </>
+                  )} */}
+                </div>
               )}
 
               {/* Loading state for individual card */}

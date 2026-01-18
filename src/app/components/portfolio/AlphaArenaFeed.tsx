@@ -18,6 +18,8 @@ import {
 import { useArenaData } from '@/contexts/ArenaDataContext'
 import { useTradingMode } from '@/contexts/TradingModeContext'
 import { Button } from '@/components/ui/button'
+import SymbolIcon from '../ui/SymbolIcon'
+import { Badge } from '../ui/badge'
 import { getModelLogo } from './logoAssets'
 import FlipNumber from './FlipNumber'
 import HighlightWrapper from './HighlightWrapper'
@@ -38,6 +40,7 @@ type FeedTab = 'trades' | 'model-chat' | 'positions'
 
 const DEFAULT_LIMIT = 100
 const MODEL_CHAT_LIMIT = 60
+const TAB_VALUE_2_LABEL = { trades: 'Completed Trades', 'model-chat': 'Model Chat', positions: 'Positions' }
 
 type CacheKey = string
 
@@ -57,6 +60,27 @@ function renderSymbolBadge(symbol?: string, size: 'sm' | 'md' = 'md') {
   return <span className={`${baseClasses} ${sizeClasses}`}>{text}</span>
 }
 
+function renderLoadingTab(message?: string) {
+  return (
+    <div className='terminal-positive space-y-1 p-2'>
+      <div className='flex items-center space-x-2'>
+        <span className='terminal-positive'>&gt;</span>
+        <span>
+          <div style={{ display:'inline-block' }}>{message}</div>
+          <span style={{ display:'inline-block', transition: 'opacity 0.5s', opacity: 1 }}>|</span>
+        </span>
+      </div>
+      <div className='ml-4 flex items-center space-x-2'>
+        <span className='terminal-warning'>[</span>
+        <span className='animate-pulse'>████████████</span>
+        <span className='terminal-warning'>]</span>
+      </div>
+      <div className='ml-4 flex items-center space-x-2'>
+        <span className='terminal-blue'>STATUS: CONNECTING TO SERVER</span>
+      </div>
+    </div>
+  )
+}
 
 export default function AlphaArenaFeed({
   refreshKey,
@@ -69,6 +93,7 @@ export default function AlphaArenaFeed({
   const { getData, updateData } = useArenaData()
   const { tradingMode } = useTradingMode()
   const [activeTab, setActiveTab] = useState<FeedTab>('trades')
+  const [mShowTab, setMShowTab] = useState<boolean>(false)
   const [allTraderOptions, setAllTraderOptions] = useState<ArenaAccountMeta[]>([])
   const [loadingAccounts, setLoadingAccounts] = useState(false)
   const [internalSelectedAccount, setInternalSelectedAccount] = useState<number | 'all'>(
@@ -659,16 +684,17 @@ export default function AlphaArenaFeed({
 
   return (
     <div className="flex flex-col flex-1 min-h-0">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Filter</span>
+      {/* The Filter Drop downs & Refresh Button  */}
+      <div className="hidden md:flex flex-col md:flex-row md:items-center md:justify-between gap-3 p-2">
+        <div className="flex items-center gap-2 max-w-7/10">
+          <span className="text-xs font-mono uppercase tracking-wide text-muted-foreground">Filter:</span>
           <select
             value={activeAccount === 'all' ? '' : activeAccount}
             onChange={(e) => {
               const value = e.target.value
               handleAccountFilterChange(value ? Number(value) : 'all')
             }}
-            className="h-8 rounded border border-border bg-muted px-2 text-xs uppercase tracking-wide text-foreground"
+            className="h-8 rounded border border-border bg-muted px-2 text-xs uppercase tracking-wide text-foreground max-w-2/3"
           >
             <option value="">All Traders</option>
             {accountOptions.map((meta) => (
@@ -677,7 +703,8 @@ export default function AlphaArenaFeed({
               </option>
             ))}
           </select>
-          <select
+          {/* Hide for MVP Demo v1 */}
+          {/* <select
             value={selectedSymbol || ''}
             onChange={(e) => setSelectedSymbol(e.target.value || null)}
             className="h-8 rounded border border-border bg-muted px-2 text-xs uppercase tracking-wide text-foreground"
@@ -689,7 +716,7 @@ export default function AlphaArenaFeed({
                 {sym}
               </option>
             ))}
-          </select>
+          </select> */}
         </div>
         <div className="flex items-center gap-2">
           <Button size="sm" variant="outline" className="h-7 text-xs" onClick={handleRefreshClick} disabled={loadingTrades || loadingModelChat || loadingPositions}>
@@ -700,33 +727,47 @@ export default function AlphaArenaFeed({
 
       <Tabs
         value={activeTab}
-        onValueChange={(value: FeedTab) => setActiveTab(value)}
-        className="flex-1 flex flex-col min-h-0"
+        onValueChange={(value: FeedTab) => { setActiveTab(value); setMShowTab(true) }}
+        className="flex-1 flex-col min-h-0 md:flex block"
       >
-        <TabsList className="grid grid-cols-3 gap-0 border border-border bg-muted text-foreground">
-          <TabsTrigger value="trades" className="data-[state=active]:bg-background data-[state=active]:text-foreground border-r border-border text-[10px] md:text-xs">
-            COMPLETED TRADES
+        <TabsList className="flex border-t border-border gap-0 bg-muted text-foreground h-full p-0 md:h-8">
+          <TabsTrigger value="trades" className="uppercase whitespace-normal md:text-nowrap flex-1 md:data-active:basis-1/2 md:data-active:bg-background data-active:border-b-0 md:border-b border-r border-border text-xs h-full md:px-1 md:data-active:px-12 md:data-active:text-base cursor-pointer bg-yellow-200 block text-start ps-2 relative after:content-['>'] after:absolute after:right-2 after:top-1/2 after:-translate-y-1/2 md:after:content-none md:text-center transition-[padding .5s ease-in-out]">
+            {TAB_VALUE_2_LABEL.trades}
           </TabsTrigger>
-          <TabsTrigger value="model-chat" className="data-[state=active]:bg-background data-[state=active]:text-foreground border-r border-border text-[10px] md:text-xs">
-            MODELCHAT
+          <TabsTrigger value="model-chat" className="uppercase whitespace-normal md:text-nowrap flex-1 md:data-active:bg-background data-active:border-b-0 md:border-b border-r border-border text-xs h-full md:px-1 md:data-active:px-12 md:data-active:text-base cursor-pointer bg-blue-200 block text-start ps-2 relative after:content-['>'] after:absolute after:right-2 after:top-1/2 after:-translate-y-1/2 md:after:content-none md:text-center transition-[padding .5s ease-in-out]">
+            {TAB_VALUE_2_LABEL['model-chat']}
           </TabsTrigger>
-          <TabsTrigger value="positions" className="data-[state=active]:bg-background data-[state=active]:text-foreground text-[10px] md:text-xs">
-            POSITIONS
+          <TabsTrigger value="positions" className="uppercase whitespace-normal md:text-nowrap flex-1 md:data-active:bg-background data-active:border-b-0 md:border-b text-xs h-full md:px-1 md:data-active:px-12 md:data-active:text-base cursor-pointer bg-green-200 block text-start ps-2 relative after:content-['>'] after:absolute after:right-2 after:top-1/2 after:-translate-y-1/2 md:after:content-none md:text-center transition-[padding .5s ease-in-out]">
+            {TAB_VALUE_2_LABEL.positions}
           </TabsTrigger>
         </TabsList>
 
-        <div className="flex-1 border border-t-0 border-border bg-card min-h-0 flex flex-col overflow-hidden">
+        <div className={`absolute w-full h-full top-0 left-0 transition-transform duration-200 ${mShowTab ? 'translate-x-0' : '-translate-x-full'} ease-in-out flex-1 bg-card min-h-0 flex flex-col overflow-hidden md:relative md:translate-x-0`}>
           {error && (
             <div className="p-4 text-sm text-red-500">
               {error}
             </div>
           )}
 
+          <div className="border-b-1 border-border flex items-center justify-between px-4 py-3 md:hidden">
+            <h2 className="terminal-text text-sm font-bold">{TAB_VALUE_2_LABEL[activeTab]}</h2>
+            {/* <button className="terminal-text text-xs font-bold text-black bg-red-500/30 hover:bg-red-500/50 border border-red-500/50 transition-colors px-3 py-0" aria-label="Close">
+              ✕</button> */}
+            <Button
+              size="sm"
+              className="terminal-text text-xs font-bold text-black bg-red-500/30 hover:bg-red-500/50 border border-red-500/50 transition-colors px-3 py-0"
+              aria-label="Close"
+              onClick={() => setMShowTab?.(false)}
+            >
+            ✕</Button>
+          </div>
+
           {!error && (
             <>
               <TabsContent value="trades" className="flex-1 h-0 overflow-y-auto mt-0 p-4 space-y-4">
-                {loadingTrades && trades.length === 0 ? (
-                  <div className="text-xs text-muted-foreground">Loading trades...</div>
+                {loadingTrades ? (
+                  // <div className="text-xs text-muted-foreground animate-pulse">Loading trades...</div>
+                  <div className="text-xs text-muted-foreground animate-pulse">{renderLoadingTab('Loading trades...')}</div>
                 ) : trades.length === 0 ? (
                   <div className="text-xs text-muted-foreground">No recent trades found.</div>
                 ) : (
@@ -770,7 +811,10 @@ export default function AlphaArenaFeed({
                             {trade.side}
                           </span>
                           <span>trade on</span>
-                          <span className="font-semibold">{trade.symbol}</span>
+                          <span className="border-1 border-gray-200 shadow flex items-center gap-1 px-2 py-1 text-xs">
+                            <SymbolIcon symbol={trade.symbol} alt={trade.symbol} className="size-4 rounded-full" />
+                            <span className="font-semibold">{trade.symbol}</span>
+                          </span>
                           <span>!</span>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs text-muted-foreground">
@@ -807,8 +851,9 @@ export default function AlphaArenaFeed({
               </TabsContent>
 
               <TabsContent value="model-chat" className="flex-1 h-0 overflow-y-auto mt-0 p-4 space-y-3">
-                {loadingModelChat && modelChat.length === 0 ? (
-                  <div className="text-xs text-muted-foreground">Loading model chat…</div>
+                {loadingModelChat ? (
+                  // <div className="text-xs text-muted-foreground">Loading model chat…</div>
+                  <div className="text-xs text-muted-foreground">{renderLoadingTab('Initializing chat feed…')}</div>
                 ) : modelChat.length === 0 ? (
                   <div className="text-xs text-muted-foreground">No recent AI commentary.</div>
                 ) : (
@@ -1017,8 +1062,9 @@ export default function AlphaArenaFeed({
               </TabsContent>
 
               <TabsContent value="positions" className="flex-1 h-0 overflow-y-auto mt-0 p-4 space-y-4">
-                {loadingPositions && positions.length === 0 ? (
-                  <div className="text-xs text-muted-foreground">Loading positions…</div>
+                {loadingPositions ? (
+                  // <div className="text-xs text-muted-foreground">Loading positions…</div>
+                  <div className="text-xs text-muted-foreground">{renderLoadingTab('Loading positions…')}</div>
                 ) : positions.length === 0 ? (
                   <div className="text-xs text-muted-foreground">No active positions currently.</div>
                 ) : (
@@ -1039,9 +1085,15 @@ export default function AlphaArenaFeed({
                               {snapshot.account_name}
                             </div>
                             {snapshot.environment && (
-                              <span className="inline-flex items-center rounded-full border border-border px-2 py-0.5 text-[11px] uppercase tracking-wide text-muted-foreground">
+                              // <span className="inline-flex items-center border border-border px-2 py-0.5 text-[11px] uppercase tracking-wide text-muted-foreground">
+                              //   {snapshot.environment}
+                              // </span>
+                              <Badge
+                                variant={snapshot.environment === 'testnet' ? 'secondary' : 'destructive'}
+                                className="rounded-none uppercase text-[.6rem] text-gray-400 px-2 bg-gray-200"
+                              >
                                 {snapshot.environment}
-                              </span>
+                              </Badge>
                             )}
                           </div>
                           <div className="flex flex-wrap items-center gap-4 text-xs uppercase tracking-wide text-muted-foreground">

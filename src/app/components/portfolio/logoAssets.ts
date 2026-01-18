@@ -1,3 +1,6 @@
+import { StaticImageData } from 'next/image'
+import logo from '@/components/ui/public/'
+
 import gptLogo from '@/components/ui/public/GPT_logo.webp'
 import deepseekLogo from '@/components/ui/public/deepseek_logo.webp'
 import qwenLogo from '@/components/ui/public/qwen_logo.webp'
@@ -28,9 +31,15 @@ import xrpIcon from '@/components/ui/public/xrp.svg'
 import dogeIcon from '@/components/ui/public/doge.svg'
 import solIcon from '@/components/ui/public/sol.svg'
 import bnbIcon from '@/components/ui/public/bnb.svg'
+import babaIcon from '@/components/ui/public/BABA.jpg'
+import coinIcon from '@/components/ui/public/COIN.jpg'
+import gldIcon from '@/components/ui/public/GLD.jpg'
+import ibitIcon from '@/components/ui/public/IBIT.jpg'
+import spyIcon from '@/components/ui/public/SPY.jpg'
+import uvixIcon from '@/components/ui/public/UVIX.jpg'
 
 type LogoAsset = {
-  src: string
+  src: string | StaticImageData,
   alt: string
   color?: string
 }
@@ -57,7 +66,7 @@ const modelChartLogoMap: Record<string, LogoAsset> = {
 
 const symbolLogoMap: Record<string, LogoAsset> = {
   DEFAULT: { src: symbolDefaultIcon, alt: 'Unknown Symbol icon' },
-  // US Stocks
+  // US Stocks & Equity
   TSLA: { src: tslaIcon, alt: 'TSLA icon' },
   NVDA: { src: nvdaIcon, alt: 'NVDA icon' },
   MSFT: { src: msftIcon, alt: 'MSFT icon' },
@@ -65,6 +74,11 @@ const symbolLogoMap: Record<string, LogoAsset> = {
   GOOGL: { src: googlIcon, alt: 'GOOGL icon' },
   PLTR: { src: pltrIcon, alt: 'PLTR icon' },
   NDX: { src: ndxIcon, alt: 'NDX icon' },
+  COIN: { src: coinIcon, alt: 'COIN icon' },
+  BABA: { src: babaIcon, alt: 'BABA icon' },
+  IBIT: { src: ibitIcon, alt: 'IBIT icon' },
+  SPY: { src: spyIcon, alt: 'SPY icon' },
+  UVIX: { src: uvixIcon, alt: 'UVIX icon' },
   // Crypto
   BTC: { src: btcIcon, alt: 'BTC icon' },
   ETH: { src: ethIcon, alt: 'ETH icon' },
@@ -72,6 +86,7 @@ const symbolLogoMap: Record<string, LogoAsset> = {
   DOGE: { src: dogeIcon, alt: 'DOGE icon' },
   SOL: { src: solIcon, alt: 'SOL icon' },
   BNB: { src: bnbIcon, alt: 'BNB icon' },
+  GLD: { src: gldIcon, alt: 'GLD icon' },
 }
 
 function normalizeKey(value?: string | null) {

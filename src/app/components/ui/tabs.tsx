@@ -75,6 +75,7 @@ export function TabsTrigger({ value, children, className }: TabsTriggerProps) {
         className
       )}
       onClick={() => setActiveTab(value)}
+      data-active={isActive ? '' : undefined }
     >
       {children}
     </button>

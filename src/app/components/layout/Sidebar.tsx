@@ -69,6 +69,8 @@ export default function Sidebar({ currentPage = 'comprehensive', onPageChange, o
     { label: 'System Logs', page: 'system-logs', icon: FileText },
   ] as const
 
+  /* Hide for MVP Demo v1 */
+  return
   return (
     <>
       <aside className="w-16 md:w-52 border-r h-full p-4 flex flex-col fixed md:relative left-0 top-0 z-50 bg-background space-y-6">

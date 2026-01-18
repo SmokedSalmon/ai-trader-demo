@@ -14,6 +14,7 @@
  */
 'use client'
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import _throttle from 'lodash/throttle'
 import {
   LineChart,
   Line,
@@ -31,7 +32,7 @@ import {
 } from 'recharts'
 import { Card } from '@/components/ui/card'
 import { getModelChartLogo, getModelColor } from '../portfolio/logoAssets'
-import FlipNumber from '../portfolio/FlipNumber'
+import NumberFlow from '@number-flow/react'
 import type { HyperliquidEnvironment } from '@/lib/types/hyperliquid'
 import { formatDateTime } from '@/lib/dateTime'
 
@@ -74,6 +75,14 @@ export default function HyperliquidAssetChart({
   const [logoPulseMap, setLogoPulseMap] = useState<Map<number, number>>(new Map())
   const [timeRange, setTimeRange] = useState<'7d' | '15d' | '1m' | '3m' | 'all'>('7d')
   const fetchingRef = useRef(false)
+
+  // for mobile phone or vertical screen where space is narrow, chart's elements takes less space
+  const [isVertical, setIsVertical] = useState<boolean>(window.innerWidth <= 768)
+  useEffect(() => {
+    const handleResize = _throttle(() => { setIsVertical(window.innerWidth <= 768); console.log(isVertical)}, 100)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [isVertical])
 
   // Brush state - preserve zoom level across data refreshes
   const [brushRange, setBrushRange] = useState<{ startIndex?: number; endIndex?: number }>({})
@@ -199,11 +208,18 @@ export default function HyperliquidAssetChart({
 
     // When all values are the same (range = 0), use fixed padding based on baseline
     const padding = range > 0 ? range * paddingPercent : baseline * 0.1
+    
+    const kTop = Math.ceil((maxValue + padding) / 1000)
+    const kBottom = Math.floor((minValue - padding) / 1000)
+    // const kTicks = (new Array(kTop - kBottom + 1)).fill(0).map((v, i) => (kBottom + i) * 1000)
+    const kRange = [kBottom * 1000, kTop * 1000]
 
     return {
       chartData,
       accountsData,
-      yAxisDomain: [Math.max(0, minValue - padding), maxValue + padding],
+      // yAxisDomain: [Math.max(0, minValue - padding), maxValue + padding],
+      // yAxisDomain: kTicks,
+      yAxisDomain: kRange,
       baseline
     }
   }, [data])
@@ -263,15 +279,15 @@ export default function HyperliquidAssetChart({
   const getTradeMarkerStyle = (side: string) => {
     switch (side.toUpperCase()) {
       case 'BUY':
-        return { bg: '#10B981', letter: 'B' } // emerald-500 (green)
+        return { bg: '#10B98188', letter: 'B' } // emerald-500 (green)
       case 'SELL':
-        return { bg: '#EF4444', letter: 'S' } // red-500 (red)
+        return { bg: '#EF444488', letter: 'S' } // red-500 (red)
       case 'CLOSE':
-        return { bg: '#3B82F6', letter: 'C' } // blue-500 (blue)
+        return { bg: '#3B82F688', letter: 'C' } // blue-500 (blue)
       case 'HOLD':
-        return { bg: '#6B7280', letter: 'H' } // gray-500 (gray)
+        return { bg: '#6B728088', letter: 'H' } // gray-500 (gray)
       default:
-        return { bg: '#F97316', letter: '?' } // orange-500
+        return { bg: '#F9731688', letter: '?' } // orange-500
     }
   }
 
@@ -307,7 +323,7 @@ export default function HyperliquidAssetChart({
 
           const y = yAxis.scale(yValue)
           const { bg, letter } = getTradeMarkerStyle(marker.side)
-          const size = 18
+          const size = 14
 
           return (
             <g
@@ -353,7 +369,7 @@ export default function HyperliquidAssetChart({
   // Terminal dot renderer with logo and value
   const renderTerminalDot = useCallback(
     (account: { account_id: number; username: string; logo: { src: string; alt: string; color?: string } }) =>
-      (props: { cx?: number; cy?: number; index?: number; value?: number; payload?: any }) => {
+      function Logo(props: { cx?: number; cy?: number; index?: number; value?: number; payload?: any }) {
         const { cx, cy, index, payload } = props
         if (cx == null || cy == null || index == null || !payload) return null
         if (chartData.length === 0) return null
@@ -374,15 +390,21 @@ export default function HyperliquidAssetChart({
         if (lastVisibleIndex === -1 || index !== lastVisibleIndex) return null
 
         const value = payload[account.username]
+        // temporary for total yield/return
+        // use the current asset/(asset at 1st data point)
         if (typeof value !== 'number') return null
+        const initialValue = (chartData && chartData.length > 0) && chartData[0][account.username]
+        if (typeof initialValue !== 'number') return null
+        const totalReturn = value / initialValue
+        if (typeof totalReturn !== 'number') return null
 
         const color = account.logo?.color || getModelColor(account.username)
         const pulseIteration = logoPulseMap.get(account.account_id) ?? 0
         const size = 32
         const logoX = cx - size / 2
         const logoY = cy - size / 2
-        const labelX = cx + size / 2 + 2
-        const labelY = cy - 18
+        const labelX = isVertical ? (cx + size / 2) : (cx + size / 2 - 10)
+        const labelY = isVertical ? (cy - size / 2 - 30) : cy
 
         return (
           <g key={account.account_id}>
@@ -395,6 +417,33 @@ export default function HyperliquidAssetChart({
                 className="pointer-events-none animate-ping-logo"
               />
             )}
+            {isVertical && <line x1={cx} y1={cy} x2={cx} y2={labelY} stroke={color} strokeWidth={2} />}
+
+            <foreignObject
+              x={labelX}
+              y={labelY}
+              width={120}
+              height={24}
+              style={{ overflow: 'visible', pointerEvents: 'none' }}
+            >
+              <div
+                className={`px-3 py-1 text-xs font-semibold text-white -translate-y-1/2 ${isVertical ? '-translate-x-full' : ''}`}
+                style={{
+                  borderRadius: '12px',
+                  backgroundColor: color,
+                  display: 'inline-block',
+                  boxShadow: '0 4px 10px rgba(0,0,0,0.18)',
+                }}
+              >
+                <NumberFlow
+                  value={totalReturn}
+                  format={{ style: 'percent', trailingZeroDisplay: 'stripIfInteger', maximumFractionDigits: 2 }}
+                  trend={0}
+                  className="text-white"
+                />
+              </div>
+            </foreignObject>
+
             <foreignObject
               x={logoX}
               y={logoY}
@@ -404,6 +453,7 @@ export default function HyperliquidAssetChart({
             >
               <div
                 style={{
+                  zIndex: 9999,
                   width: size,
                   height: size,
                   borderRadius: '50%',
@@ -426,26 +476,6 @@ export default function HyperliquidAssetChart({
                 />
               </div>
             </foreignObject>
-
-            <foreignObject
-              x={labelX}
-              y={labelY}
-              width={120}
-              height={24}
-              style={{ overflow: 'visible', pointerEvents: 'none' }}
-            >
-              <div
-                className="px-3 py-1 text-xs font-semibold text-white"
-                style={{
-                  borderRadius: '12px',
-                  backgroundColor: color,
-                  display: 'inline-block',
-                  boxShadow: '0 4px 10px rgba(0,0,0,0.18)',
-                }}
-              >
-                <FlipNumber value={value} prefix="$" decimals={2} className="text-white" />
-              </div>
-            </foreignObject>
           </g>
         )
       },
@@ -454,8 +484,8 @@ export default function HyperliquidAssetChart({
 
   if (loading && data.length === 0) {
     return (
-      <Card className="h-full flex items-center justify-center">
-        <div className="text-muted-foreground">Loading Hyperliquid data...</div>
+      <Card className="h-full flex items-center justify-center border-0">
+        <div className="text-muted-foreground">Loading Account data...</div>
       </Card>
     )
   }
@@ -479,10 +509,11 @@ export default function HyperliquidAssetChart({
   }
 
   return (
-    <Card className="h-full">
-      <div className="h-full relative">
+    <Card className="border-0 border-b-1 shadow-none h-full">
+      {/* <div className="h-full relative"> */}
         {/* Time Range Selector */}
-        <div className="absolute top-3 right-3 z-10 flex gap-1 bg-white/90 backdrop-blur-sm rounded-lg p-1 shadow-sm border border-gray-200">
+        {/* Hide for MVP Demo v1 */}
+        {/* <div className="absolute top-3 right-3 z-10 flex gap-1 bg-white/90 backdrop-blur-sm rounded-lg p-1 shadow-sm border border-gray-200">
           {[
             { value: '7d' as const, label: '7D' },
             { value: '15d' as const, label: '15D' },
@@ -502,18 +533,19 @@ export default function HyperliquidAssetChart({
               {option.label}
             </button>
           ))}
-        </div>
-        <ResponsiveContainer width="100%" height="100%">
+        </div> */}
+        <ResponsiveContainer width="100%" height="100%" minHeight={320}>
+        {/* <ResponsiveContainer width="100%" height="100%" aspect={1.618}> */}
           <ComposedChart
             data={chartData}
-            margin={{ top: 20, right: 160, left: 20, bottom: 40 }}
+            margin={{ top: 30, right: isVertical ? 30 : 40, left: 10, bottom: 20 }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
             <XAxis
               dataKey="datetime_str"
               stroke="#888"
               fontSize={11}
-              interval={Math.ceil(chartData.length / 6)}
+              interval={Math.ceil(chartData.length / 4)}
               tickFormatter={(value) => {
                 if (!value) return ''
                 // Convert UTC datetime_str to local time
@@ -526,7 +558,7 @@ export default function HyperliquidAssetChart({
               stroke="#888"
               fontSize={11}
               domain={yAxisDomain}
-              tickFormatter={(value) => `$${Number(value).toLocaleString()}`}
+              tickFormatter={(value) => `$${Number(Math.round(value)).toLocaleString()}`}
             />
             <Tooltip
               contentStyle={{
@@ -577,6 +609,11 @@ export default function HyperliquidAssetChart({
               )
             })}
 
+            {/* Trade markers (B/S/C circles) */}
+            {tradeMarkers.length > 0 && (
+              <Customized component={renderTradeMarkers} />
+            )}
+
             {/* Terminal dots with logos */}
             {accountsData.map(account => (
               <Line
@@ -590,11 +627,6 @@ export default function HyperliquidAssetChart({
                 isAnimationActive={false}
               />
             ))}
-
-            {/* Trade markers (B/S/C circles) */}
-            {tradeMarkers.length > 0 && (
-              <Customized component={renderTradeMarkers} />
-            )}
 
             {/* Brush for zooming/panning */}
             <Brush
@@ -634,7 +666,7 @@ export default function HyperliquidAssetChart({
             )}
           </div>
         )}
-      </div>
+      {/* </div> */}
     </Card>
   )
 }

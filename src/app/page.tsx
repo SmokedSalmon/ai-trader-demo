@@ -73,7 +73,7 @@ interface Order { id: number; order_no: string; symbol: string; name: string; ma
 interface Trade { id: number; order_id: number; account_id: number; symbol: string; name: string; market: string; side: string; price: number; quantity: number; commission: number; trade_time: string }
 
 const PAGE_TITLES: Record<string, string> = {
-  comprehensive: 'Hyper Alpha Arena',
+  comprehensive: 'AI LLM Trading MVP',
   'system-logs': 'System Logs',
   'prompt-management': 'Prompt Templates',
   'signal-management': 'Signal System',
@@ -633,7 +633,7 @@ function App() {
     }
 
     return (
-      <main className="flex-1 p-4 overflow-hidden flex flex-col min-h-0 min-w-0">
+      <main className="flex-1 flex flex-col min-h-0 min-w-0">
 
         {currentPage === 'comprehensive' && (
           tradingMode === 'paper' ? (
