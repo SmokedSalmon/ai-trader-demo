@@ -525,8 +525,8 @@ export interface ArenaModelChatEntry {
   account_id: number
   account_name: string
   model?: string | null
-  operation: string
-  symbol?: string | null
+  operation: string | string[],
+  symbol?: string | string[] | null
   reason: string
   executed: boolean
   prev_portion: number
@@ -570,8 +570,9 @@ export interface ModelChatSnapshots {
   error?: string
 }
 
-export async function getModelChatSnapshots(decisionId: number): Promise<ModelChatSnapshots> {
-  const response = await apiRequest(`/arena/model-chat/${decisionId}/snapshots`)
+export async function getModelChatSnapshots(decisionId: number, decisionTimeStamp?: number): Promise<ModelChatSnapshots> {
+  const query = decisionTimeStamp ? `?dts=${decisionTimeStamp}` : ''
+  const response = await apiRequest(`/arena/model-chat/${decisionId}/snapshots${query}`)
   return response.json()
 }
 

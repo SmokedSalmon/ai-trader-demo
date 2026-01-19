@@ -11,13 +11,8 @@ import path from 'node:path';
  In case the end of any, go to:
  https://api.rockflow.ai/social/api/arenas to for active contest and participants
 */
-const USER_ID = 112711125048675
-const MOCKINFO = {
-    name: 'Deepseek V3.1',
-    model: 'deepseek-chat',
-    market: 'US',
-    wallet: '0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4',
-}
+import { chart2AssetCurve } from '../src/app/lib/rockflowApi.ts'
+
 const FROM_DATE_RAW = 1761091200000    // since campaign 2025-10-22T00:00:00.000Z?
 // const TO_DATE = new Date('2026-01-13T15:50:00.000Z')
 const TO_DATE = new Date()
@@ -42,33 +37,13 @@ async function main() {
     const res = await fetch(url, {
         headers: {
             appid: '1',
-            'cache-control': 'no-cache',
+            // 'cache-control': 'no-cache',
             'content-type': 'application/json',
         },
-        mode: 'cors',
+        // mode: 'cors',
     })
     if (!res.ok) { throw(`${res.status} ${res.statusText}`)}
-    const chartData = (await res.json()).data
-    if (!chartData) throw('Chart data is corrupted')
-
-    const converted = Object.values(chartData)
-        // use only Those of Specific User
-        .map(item => item.find(userDP => userDP.userId === USER_ID))
-        // sort from oldest to newest
-        .sort((a, b) => a.createTime - b.createTime)
-        .map(item => ({
-            // demo page chart plots by second, NOT mini-second
-            timestamp: Math.round(item.createTime / 1000),
-            datetime_str: (new Date(item.createTime)).toISOString().replace('T', ' ').replace(/\.\d+Z$/, ''),
-            account_id: 1,
-            username: MOCKINFO.name,
-            user_id: 1,
-            total_assets: item.netLiquidationValue,
-            // Fixed, not of any use??
-            cash: 0.0,
-            positions_value: item.netLiquidationValue,
-            wallet_address: MOCKINFO.wallet
-        }))
+    const converted = chart2AssetCurve(await res.json())
 
     const rawJson = JSON.stringify(converted)
     const output = '=== Converted JSON (Possibly Trimmed) ===\n'

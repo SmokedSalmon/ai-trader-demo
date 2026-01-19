@@ -2,69 +2,69 @@
     "prices": {
         "BTC": {
             "symbol": "BTC",
-            "price": 96299.5,
-            "timestamp": 1768446723886
+            "price": 90418.06,
+            "timestamp": 1769008935942
         },
         "ETH": {
             "symbol": "ETH",
-            "price": 3315.05,
-            "timestamp": 1768446723886
+            "price": 3007.66,
+            "timestamp": 1769008935942
         },
         "SOL": {
             "symbol": "SOL",
-            "price": 144.695,
-            "timestamp": 1768446723886
+            "price": 130.21,
+            "timestamp": 1769008935942
         },
         "BNB": {
             "symbol": "BNB",
-            "price": 934.365,
-            "timestamp": 1768446723886
+            "price": 890.88,
+            "timestamp": 1769008935942
         },
         "DOGE": {
             "symbol": "DOGE",
-            "price": 0.144235,
-            "timestamp": 1768446723886
+            "price": 0.12585,
+            "timestamp": 1769008935942
         },
         "XRP": {
             "symbol": "XRP",
-            "price": 2.10525,
-            "timestamp": 1768446723886
+            "price": 1.9461,
+            "timestamp": 1769008935942
         },
         "TSLA": {
             "symbol": "TSLA",
-            "price": 437.945,
-            "timestamp": 1768446723886
+            "price": 425.77,
+            "timestamp": 1769008935942
         },
         "XYZ100": {
             "symbol": "XYZ100",
-            "price": 25462.5,
-            "timestamp": 1768446723886
+            "price": 25216.59,
+            "timestamp": 1769008935942
         },
         "NVDA": {
             "symbol": "NVDA",
-            "price": 182.725,
-            "timestamp": 1768446723886
+            "price": 180.87,
+            "timestamp": 1769008935942
         },
         "MSFT": {
             "symbol": "MSFT",
-            "price": 460,
-            "timestamp": 1768446723886
+            "price": 450.90,
+            "timestamp": 1769008935942
         },
         "AMZN": {
             "symbol": "AMZN",
-            "price": 236.895,
-            "timestamp": 1768446723886
+            "price": 230.45,
+            "timestamp": 1769008935942
         },
         "GOOGL": {
             "symbol": "GOOGL",
-            "price": 336.59,
-            "timestamp": 1768446723886
+            "price": 326.47,
+            "timestamp": 1769008935942
         },
         "PLTR": {
             "symbol": "PLTR",
-            "price": 177.41,
-            "timestamp": 1768446723886
+            "price": 169.26,
+            "timestamp": 1769008935942
         }
     },
-    "serverTime": 1768446723886
+    "serverTime": 1769008935942
 }

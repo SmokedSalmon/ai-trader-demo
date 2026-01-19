@@ -10,14 +10,7 @@ import path from 'node:path';
  In case the end of any, go to:
  https://api.rockflow.ai/social/api/arenas to for active contest and participants
 */
-const USER_ID = 112711125048675
-const MOCKINFO = {
-    name: 'Deepseek V3.1',
-    model: 'deepseek-chat',
-    market: 'US',
-    wallet: '0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4',
-    env: 'testnet',
-}
+import { assets2Balance } from '../src/app/lib/rockflowApi.ts'
 
 const endpoint = 'https://api.rockflow.ai/social/api/arenas/classic/campaign/assets'
 // const searchParam = new URLSearchParams({
@@ -39,40 +32,14 @@ async function main() {
     const res = await fetch(url, {
         headers: {
             appid: '1',
-            'cache-control': 'no-cache',
+            // 'cache-control': 'no-cache',
             'content-type': 'application/json',
         },
-        method: 'GET',
-        mode: 'cors',
+        // mode: 'cors',
     })
     if (!res.ok) { throw(`${res.status} ${res.statusText}`)}
-    const data = (await res.json()).data
-
-    const userAssets = data[USER_ID]
-    if (!userAssets) throw(`User ${USER_ID} has invalid asset data`)
-    const {
-        totalAssets, positions, maintenanceMargin: usedMargin
-    } = userAssets
-    if (!positions || positions.length <= 1) stdout.write(`User ${USER_ID} has no positions`)
-
-    const marginUsage = usedMargin / totalAssets * 100
-    const availableBalance = totalAssets - usedMargin
-
-    const nowD = new Date()
-    const balance = {
-        environment: MOCKINFO.env,
-        account_id: 1,
-        total_equity: totalAssets,
-        available_balance: availableBalance,    // not sure
-        used_margin: usedMargin,
-        maintenance_margin: usedMargin,                  // what is it? other than margin_usage
-        margin_usage_percent: marginUsage,
-        withdrawal_available: availableBalance,                // what is it? other than available_balance
-        wallet_address: MOCKINFO.wallet,
-        timestamp: nowD.getTime(),
-        source: 'cache',
-        cached_at: nowD.toISOString().replace(/Z$/, '000Z'),
-    }
+    const body = await res.json()
+    const balance = assets2Balance(body)
 
     const rawJson = JSON.stringify(balance)
     const output = '=== Converted JSON (Possibly Trimmed) ===\n'

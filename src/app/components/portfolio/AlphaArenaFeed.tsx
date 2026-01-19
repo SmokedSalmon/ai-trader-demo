@@ -60,6 +60,38 @@ function renderSymbolBadge(symbol?: string, size: 'sm' | 'md' = 'md') {
   return <span className={`${baseClasses} ${sizeClasses}`}>{text}</span>
 }
 
+function renderOperations(entry: ArenaModelChatEntry) {
+  const operation = entry.operation as string[]
+  const symbol = entry.symbol as string[]
+  return (
+    <div className="text-sm font-medium text-foreground flex items-center gap-2">
+      {(operation as string[]).map((item = '', index) => (
+        <div key={`op-${index}`} className="flex flex-no-warp justify-start items-center overflow-hidden">
+          <span className={`px-2 py-1 rounded text-xs font-bold me-1 ${
+            item?.toUpperCase() === 'BUY'
+              ? 'bg-emerald-100 text-emerald-800'
+              : item?.toUpperCase() === 'SELL'
+              ? 'bg-red-100 text-red-800'
+              : item?.toUpperCase() === 'CLOSE'
+              ? 'bg-blue-100 text-blue-800'
+              : item?.toUpperCase() === 'HOLD'
+              ? 'bg-gray-200 text-gray-800'
+              : 'bg-orange-100 text-orange-800'
+          }`}>
+            {(item || 'UNKNOWN').toUpperCase()}
+          </span>
+          {symbol[index] && (
+            <span className="font-semibold">{symbol[index]}</span>
+          )}
+          {(index < entry.operation.length - 1) && (
+            <div className="border-e-1 border-gray-400 w-px h-4 ms-2" />
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function renderLoadingTab(message?: string) {
   return (
     <div className='terminal-positive space-y-1 p-2'>
@@ -636,7 +668,7 @@ export default function AlphaArenaFeed({
     !!copiedSections[`${entryId}-${section}`]
 
   // Load snapshots for a specific entry when expanded
-  const loadSnapshots = useCallback(async (entryId: number) => {
+  const loadSnapshots = useCallback(async (entryId: number, decision_time?: number) => {
     // Skip if already cached or loading
     if (snapshotCache.current.has(entryId) || loadingSnapshots.has(entryId)) {
       return
@@ -645,7 +677,7 @@ export default function AlphaArenaFeed({
     setLoadingSnapshots((prev) => new Set(prev).add(entryId))
 
     try {
-      const snapshots = await getModelChatSnapshots(entryId)
+      const snapshots = await getModelChatSnapshots(entryId, decision_time)
       snapshotCache.current.set(entryId, snapshots)
 
       // Update the modelChat entry with snapshot data
@@ -886,7 +918,7 @@ export default function AlphaArenaFeed({
                                 })
                               } else {
                                 // Load snapshots when expanding
-                                loadSnapshots(entry.id)
+                                loadSnapshots(entry.id, entry.decision_time && (new Date(entry.decision_time)).getTime() || undefined)
                               }
                               return next
                             })
@@ -906,24 +938,7 @@ export default function AlphaArenaFeed({
                           </div>
                           <span>{formatDate(entry.decision_time)}</span>
                         </div>
-                        <div className="text-sm font-medium text-foreground flex items-center gap-2">
-                          <span className={`px-2 py-1 rounded text-xs font-bold ${
-                            entry.operation?.toUpperCase() === 'BUY'
-                              ? 'bg-emerald-100 text-emerald-800'
-                              : entry.operation?.toUpperCase() === 'SELL'
-                              ? 'bg-red-100 text-red-800'
-                              : entry.operation?.toUpperCase() === 'CLOSE'
-                              ? 'bg-blue-100 text-blue-800'
-                              : entry.operation?.toUpperCase() === 'HOLD'
-                              ? 'bg-gray-200 text-gray-800'
-                              : 'bg-orange-100 text-orange-800'
-                          }`}>
-                            {(entry.operation || 'UNKNOWN').toUpperCase()}
-                          </span>
-                          {entry.symbol && (
-                            <span className="font-semibold">{entry.symbol}</span>
-                          )}
-                        </div>
+                        {renderOperations(entry)}
                         <div className="text-xs text-muted-foreground">
                           {isExpanded ? entry.reason : `${entry.reason.slice(0, 160)}${entry.reason.length > 160 ? '…' : ''}`}
                         </div>
@@ -1014,14 +1029,15 @@ export default function AlphaArenaFeed({
                             })()}
                           </div>
                         )}
-                        <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground uppercase tracking-wide">
+                        {/* Hide for MVP Demo v1 */}
+                        {/* <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground uppercase tracking-wide">
                           <span>Prev Portion: <span className="font-semibold text-foreground">{(entry.prev_portion * 100).toFixed(1)}%</span></span>
                           <span>Target Portion: <span className="font-semibold text-foreground">{(entry.target_portion * 100).toFixed(1)}%</span></span>
                           <span>Total Balance: <span className="font-semibold text-foreground">
                             <FlipNumber value={entry.total_balance} prefix="$" decimals={2} />
                           </span></span>
                           <span>Executed: <span className={`font-semibold ${entry.executed ? 'text-emerald-600' : 'text-amber-600'}`}>{entry.executed ? 'YES' : 'NO'}</span></span>
-                        </div>
+                        </div> */}
                         <div className="mt-2 text-[11px] text-primary underline">
                           {isExpanded ? 'Click to collapse' : 'Click to expand'}
                         </div>
