@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useMemo, useState, useRef, useCallback } from 'react'
 import Image from 'next/image'
+import Markdown from 'markdown-to-jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   ArenaAccountMeta,
@@ -58,6 +59,36 @@ function renderSymbolBadge(symbol?: string, size: 'sm' | 'md' = 'md') {
   const baseClasses = 'inline-flex items-center justify-center rounded bg-muted text-muted-foreground font-semibold'
   const sizeClasses = size === 'sm' ? 'h-4 w-4 text-[9px]' : 'h-5 w-5 text-[10px]'
   return <span className={`${baseClasses} ${sizeClasses}`}>{text}</span>
+}
+
+function renderOperations(entry: { operation: [], symbol: []}) {
+  return (
+    <div className="text-sm font-medium text-foreground flex items-center gap-2">
+      {entry.operation.map((item = '', index) => (
+        <div key={`op-${index}`} className="flex flex-no-warp justify-start items-center overflow-hidden">
+          <span className={`px-2 py-1 rounded text-xs font-bold me-1 ${
+            item?.toUpperCase() === 'BUY'
+              ? 'bg-emerald-100 text-emerald-800'
+              : item?.toUpperCase() === 'SELL'
+              ? 'bg-red-100 text-red-800'
+              : item?.toUpperCase() === 'CLOSE'
+              ? 'bg-blue-100 text-blue-800'
+              : item?.toUpperCase() === 'HOLD'
+              ? 'bg-gray-200 text-gray-800'
+              : 'bg-orange-100 text-orange-800'
+          }`}>
+            {(item || 'UNKNOWN').toUpperCase()}
+          </span>
+          {entry?.symbol[index] && (
+            <span className="font-semibold">{entry.symbol[index]}</span>
+          )}
+          {(index < entry.operation.length - 1) && (
+            <div className="border-e-1 border-gray-400 w-px h-4 ms-2" />
+          )}
+        </div>
+      ))}
+    </div>
+  )
 }
 
 function renderLoadingTab(message?: string) {
@@ -868,9 +899,9 @@ export default function AlphaArenaFeed({
 
                     return (
                       <HighlightWrapper key={entry.id} isNew={isNew}>
-                        <button
-                          type="button"
-                          className="w-full text-left border border-border rounded bg-muted/30 p-4 space-y-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        <div
+                          // type="button"
+                          className="w-full text-left border border-border rounded bg-muted/30 p-4 space-y-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer hover:shadow-sm hover:shadow-gray-700 hover:border-0 selected:shadow-sm selected:shadow-gray-700 selected:border-0"
                           onClick={() =>
                             setExpandedChat((current) => {
                               const next = current === entry.id ? null : entry.id
@@ -906,24 +937,7 @@ export default function AlphaArenaFeed({
                           </div>
                           <span>{formatDate(entry.decision_time)}</span>
                         </div>
-                        <div className="text-sm font-medium text-foreground flex items-center gap-2">
-                          <span className={`px-2 py-1 rounded text-xs font-bold ${
-                            entry.operation?.toUpperCase() === 'BUY'
-                              ? 'bg-emerald-100 text-emerald-800'
-                              : entry.operation?.toUpperCase() === 'SELL'
-                              ? 'bg-red-100 text-red-800'
-                              : entry.operation?.toUpperCase() === 'CLOSE'
-                              ? 'bg-blue-100 text-blue-800'
-                              : entry.operation?.toUpperCase() === 'HOLD'
-                              ? 'bg-gray-200 text-gray-800'
-                              : 'bg-orange-100 text-orange-800'
-                          }`}>
-                            {(entry.operation || 'UNKNOWN').toUpperCase()}
-                          </span>
-                          {entry.symbol && (
-                            <span className="font-semibold">{entry.symbol}</span>
-                          )}
-                        </div>
+                        {renderOperations(entry)}
                         <div className="text-xs text-muted-foreground">
                           {isExpanded ? entry.reason : `${entry.reason.slice(0, 160)}${entry.reason.length > 160 ? '…' : ''}`}
                         </div>
@@ -981,9 +995,16 @@ export default function AlphaArenaFeed({
                                         </div>
                                       ) : displayContent ? (
                                         <>
-                                          <pre className="whitespace-pre-wrap wrap-break-word font-mono text-[11px] leading-relaxed text-foreground/90">
+                                          {/* <pre className="whitespace-pre-wrap wrap-break-word font-mono text-[11px] leading-relaxed text-foreground/90">
                                             {displayContent}
-                                          </pre>
+                                          </pre> */}
+                                          {/* { label === 'USER_PROMPT' ? (
+                                            <pre className="whitespace-pre-wrap wrap-break-word font-mono text-[11px] leading-relaxed text-foreground/90">
+                                              {displayContent}
+                                            </pre>
+                                          ) : <Markdown className='chat-markdown'>{displayContent}</Markdown>} */}
+                                          <Markdown className='chat-markdown'>{displayContent}</Markdown>
+                                          
                                           <div className="mt-3 flex justify-end">
                                             <button
                                               type="button"
@@ -1014,18 +1035,19 @@ export default function AlphaArenaFeed({
                             })()}
                           </div>
                         )}
-                        <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground uppercase tracking-wide">
+                        {/* Hide for MVP Demo v1 */}
+                        {/* <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground uppercase tracking-wide">
                           <span>Prev Portion: <span className="font-semibold text-foreground">{(entry.prev_portion * 100).toFixed(1)}%</span></span>
                           <span>Target Portion: <span className="font-semibold text-foreground">{(entry.target_portion * 100).toFixed(1)}%</span></span>
                           <span>Total Balance: <span className="font-semibold text-foreground">
                             <FlipNumber value={entry.total_balance} prefix="$" decimals={2} />
                           </span></span>
                           <span>Executed: <span className={`font-semibold ${entry.executed ? 'text-emerald-600' : 'text-amber-600'}`}>{entry.executed ? 'YES' : 'NO'}</span></span>
-                        </div>
+                        </div> */}
                         <div className="mt-2 text-[11px] text-primary underline">
                           {isExpanded ? 'Click to collapse' : 'Click to expand'}
                         </div>
-                        </button>
+                        </div>
                       </HighlightWrapper>
                     )
                   })}

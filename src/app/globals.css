@@ -317,4 +317,17 @@
   svg.recharts-surface {
     overflow: visible;
   }
+
+  .chat-markdown {
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: revert;
+      margin: revert;
+      padding: revert;
+      font-size: revert;
+    }
+    hr {
+      margin: revert;
+      padding: revert;
+    }
+  }
 }
