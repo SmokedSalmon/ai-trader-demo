@@ -2,19 +2,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { MOCK_INFO } from '../src/app/lib/rockflowApi.ts'
 // this mjs is ESM not CommonJS, cannot use '__dirname'
 const outputDir = path.resolve(import.meta.dirname, '../.snapshots')
 const outoutFile1 = path.join(outputDir, 'model-chat_full.temp.json')
 const outoutFile2 = path.join(outputDir, 'snapshot-store_full.temp.json')
 import original from '../mock/nor1.ai-archived-2025-12-31/conversations.json' with { type: 'json' }
-
-export const MOCK_INFO = {
-    name: 'Deepseek V3.1',
-    model: 'deepseek-chat',
-    market: 'US',
-    wallet: '0x4a0ae373afa45b048a83b79fa8f73ae7c3decee4',
-    env: 'testnet',
-}
 
 const normalizeSymbol = (symbol) => {
     let nSymbol = symbol.split(':')[1] || symbol
@@ -38,6 +31,8 @@ const chatEntryConvert = (([key, value]) => {
     return [symbol, value]
 })
 
+
+/* Convert nor1.ai season 1.5 end /conversations to earlier /conversation */
 // async function main() {
 //     // content is large, console or terminal will trim
 //     // prepare output to file
@@ -77,6 +72,7 @@ const chatEntryConvert = (([key, value]) => {
 //     console.log(output)
 // }
 
+/* Convert nor1.ai season 1.5 end /conversations to season 1 /model-chat & /snapshot */
 async function main() {
     // content is large, console or terminal will trim
     // prepare output to file
@@ -161,26 +157,25 @@ async function main() {
         snapshots[id] = snapshot
         return {
             id,
-            // for modal chat
-            "account_id": aggregation_id,
-            "account_name": run_name,
-            "model": model_type,
-            // use array later
+            account_id: aggregation_id,
+            // account_name: run_name,
+            // model: model_type,
+            account_name: MOCK_INFO.name,
+            model: MOCK_INFO.model,
             operation: operation,
             symbol: symbols,
-            "reason": cot_trace_summary,
+            reason: cot_trace_summary,
             executed,
             prev_portion: 0.0,
             target_portion: 0.0,
             total_balance: 0.0,
-            "order_id": null,
+            order_id: null,
             decision_time,
-            "trigger_mode": "unified",
-            "strategy_enabled": true,
+            trigger_mode: "unified",
+            strategy_enabled: true,
             last_trigger_at,
             trigger_latency_seconds,
-            "wallet_address": MOCK_INFO.wallet
-            // for all the snapshots
+            wallet_address: MOCK_INFO.wallet
         }
     })
     const converted1 = {

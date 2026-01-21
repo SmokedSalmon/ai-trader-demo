@@ -5,7 +5,7 @@ import type {
     IParticipantData, IRootResponseBody,
 } from './types/rockflowApi.d'
 
-const TARGET_USER_ID = 112711125048675
+export const TARGET_USER_ID = 112711125048675
 export const MOCK_INFO = {
     name: 'Deepseek V3.1',
     model: 'deepseek-chat',

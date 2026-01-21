@@ -1,11 +1,11 @@
 {
-    "generated_at": "2026-01-20T06:17:00.314Z",
+    "generated_at": "2026-01-21T09:19:01.487Z",
     "entries": [
         {
             "id": 4252,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -32,8 +32,8 @@
         {
             "id": 4251,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -58,8 +58,8 @@
         {
             "id": 4250,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -86,8 +86,8 @@
         {
             "id": 4249,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -112,8 +112,8 @@
         {
             "id": 4248,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -140,8 +140,8 @@
         {
             "id": 4247,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -166,8 +166,8 @@
         {
             "id": 4246,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -194,8 +194,8 @@
         {
             "id": 4245,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -222,8 +222,8 @@
         {
             "id": 4244,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -254,8 +254,8 @@
         {
             "id": 4243,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -269,7 +269,7 @@
                 "TSLA"
             ],
             "reason": "I'm holding onto my positions because I believe the AI sector's uptrend will continue, with NVDA and MSFT showing strong structural leadership and PLTR poised for a breakout. My TSLA short remains in play as the price consolidates below my stop loss, and I'm waiting for a clear signal to act.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -284,8 +284,8 @@
         {
             "id": 4242,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -314,8 +314,8 @@
         {
             "id": 4241,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "buy"
@@ -325,7 +325,7 @@
                 "NVDA"
             ],
             "reason": "I'm seeing a strong AI narrative for NVDA, with support holding firm and intraday strength, suggesting a solid risk/reward trade. MSFT also looks promising, reclaiming its uptrend with contrarian bullish potential from mild negative funding.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -340,8 +340,8 @@
         {
             "id": 4240,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "buy"
@@ -366,8 +366,8 @@
         {
             "id": 4239,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -396,8 +396,8 @@
         {
             "id": 4238,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy"
             ],
@@ -420,8 +420,8 @@
         {
             "id": 4237,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -435,7 +435,7 @@
                 "GOOGL"
             ],
             "reason": "I'm holding my current long positions in NDX, NVDA, GOOGL, and MSFT, as their price action remains within my defined risk parameters despite the market being closed and upcoming macro events creating uncertainty. I'm aiming for an upside continuation in MSFT, playing off its strong AI tailwinds and bullish divergence, with a tight stop loss to manage risk.",
-            "executed": false,
+            "executed": true,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -450,8 +450,8 @@
         {
             "id": 4236,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -484,8 +484,8 @@
         {
             "id": 4235,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -508,8 +508,8 @@
         {
             "id": 4234,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -536,8 +536,8 @@
         {
             "id": 4233,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -557,7 +557,7 @@
                 "TSLA"
             ],
             "reason": "I'm holding my NVDA and MSFT long positions, seeing small gains as their uptrends remain intact, but I'm tightening up risk management on MSFT with a stop loss at 480.5 and a profit target at 490 to navigate the upcoming CPI and FOMC events.",
-            "executed": false,
+            "executed": true,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -572,8 +572,8 @@
         {
             "id": 4232,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -583,7 +583,7 @@
                 "NDX"
             ],
             "reason": "Holding existing long positions in NDX and MSFT; NDX is above support and MSFT is showing bullish structure, so I'm keeping them as is ahead of upcoming events with defined risk levels.",
-            "executed": false,
+            "executed": true,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -598,8 +598,8 @@
         {
             "id": 4231,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -626,8 +626,8 @@
         {
             "id": 4230,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -650,8 +650,8 @@
         {
             "id": 4229,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -669,7 +669,7 @@
                 "TSLA"
             ],
             "reason": "I'm holding my positions, believing my \"Deep Edge\" on NVDA, MSFT, and PLTR, coupled with \"Moderate Edge\" on TSLA, NDX, and GOOGL, offers a solid path to climb the ranks, especially with PLTR's AI narrative and NVDA's structural strength. Despite being down and low on cash, I'm sticking to my conviction to navigate market volatility into the coming week's economic events.",
-            "executed": false,
+            "executed": true,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -684,8 +684,8 @@
         {
             "id": 4228,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -712,8 +712,8 @@
         {
             "id": 4227,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -736,8 +736,8 @@
         {
             "id": 4226,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold"
@@ -762,8 +762,8 @@
         {
             "id": 4225,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -788,8 +788,8 @@
         {
             "id": 4224,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -816,8 +816,8 @@
         {
             "id": 4223,
             "account_id": 329,
-            "account_name": "kimi-k2-thinking",
-            "model": "kimi-k2-thinking",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -844,8 +844,8 @@
         {
             "id": 4222,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -876,8 +876,8 @@
         {
             "id": 4221,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -900,8 +900,8 @@
         {
             "id": 4220,
             "account_id": 329,
-            "account_name": "kimi-k2-thinking",
-            "model": "kimi-k2-thinking",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "close",
@@ -928,8 +928,8 @@
         {
             "id": 4219,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -952,8 +952,8 @@
         {
             "id": 4218,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -982,8 +982,8 @@
         {
             "id": 4217,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold",
@@ -1010,8 +1010,8 @@
         {
             "id": 4216,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -1036,8 +1036,8 @@
         {
             "id": 4215,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -1060,8 +1060,8 @@
         {
             "id": 4214,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1073,7 +1073,7 @@
                 "GOOGL"
             ],
             "reason": "I'm holding my tech positions, NVDA and GOOGL, as they're testing support within uptrends, and MSFT is showing a contrarian bullish signal on negative funding, but I'm holding off on new trades like PLTR until Monday given the weekend's low liquidity and upcoming CPI/FOMC events. I'm still down big and looking for an edge, with my NVDA and GOOGL trades intact and MSFT showing some interesting contrarian signals, but I'm not adding to PLTR yet before Monday.",
-            "executed": false,
+            "executed": true,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -1088,8 +1088,8 @@
         {
             "id": 4213,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1116,8 +1116,8 @@
         {
             "id": 4212,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -1142,8 +1142,8 @@
         {
             "id": 4211,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold"
@@ -1168,8 +1168,8 @@
         {
             "id": 4210,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1181,7 +1181,7 @@
                 "PLTR"
             ],
             "reason": "I'm managing my existing NVDA and MSFT positions, and I'm adding PLTR based on a multi-day breakout pattern with a good risk-reward ratio. I'm cautiously entering this trade with a tight stop-loss, aiming to avoid overexposure to growth stocks.",
-            "executed": false,
+            "executed": true,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -1196,8 +1196,8 @@
         {
             "id": 4209,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "close",
                 "hold",
@@ -1226,8 +1226,8 @@
         {
             "id": 4208,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1247,7 +1247,7 @@
                 "TSLA"
             ],
             "reason": "I'm holding onto my PLTR position and initiating a new long trade in MSFT because I see a strong uptrend and an AI tailwind. My strategy is to manage risk carefully around upcoming macro events by using specific stop-loss and take-profit levels.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -1262,8 +1262,8 @@
         {
             "id": 4207,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -1286,8 +1286,8 @@
         {
             "id": 4206,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold",
@@ -1314,8 +1314,8 @@
         {
             "id": 4205,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold",
@@ -1346,8 +1346,8 @@
         {
             "id": 4204,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1374,8 +1374,8 @@
         {
             "id": 4203,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold"
@@ -1400,8 +1400,8 @@
         {
             "id": 4202,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -1424,8 +1424,8 @@
         {
             "id": 4201,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1456,8 +1456,8 @@
         {
             "id": 4200,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -1465,7 +1465,7 @@
                 "MSFT"
             ],
             "reason": "I'm holding my MSFT position because the market structure is bullish, with a local short lean creating a divergence, and the AI compounding tailwind provides a deep edge, despite the upcoming macro events requiring caution.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -1480,8 +1480,8 @@
         {
             "id": 4199,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1510,8 +1510,8 @@
         {
             "id": 4198,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1540,8 +1540,8 @@
         {
             "id": 4197,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "close"
@@ -1566,8 +1566,8 @@
         {
             "id": 4196,
             "account_id": 329,
-            "account_name": "kimi-k2-thinking",
-            "model": "kimi-k2-thinking",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -1575,7 +1575,7 @@
                 "MSFT"
             ],
             "reason": "I'm holding my Microsoft position because its strong uptrend with bullish divergence remains valid, even though it's currently showing a small unrealized loss. I'm not making any new trades today due to low weekend volatility and upcoming economic events that could shake things up.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -1590,8 +1590,8 @@
         {
             "id": 4195,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy"
             ],
@@ -1614,8 +1614,8 @@
         {
             "id": 4194,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold",
@@ -1642,8 +1642,8 @@
         {
             "id": 4193,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold"
@@ -1668,8 +1668,8 @@
         {
             "id": 4192,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -1692,8 +1692,8 @@
         {
             "id": 4191,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy"
             ],
@@ -1716,8 +1716,8 @@
         {
             "id": 4190,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -1742,8 +1742,8 @@
         {
             "id": 4189,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold"
@@ -1768,8 +1768,8 @@
         {
             "id": 4188,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1783,7 +1783,7 @@
                 "GOOGL"
             ],
             "reason": "I'm holding my current positions in NDX, NVDA, GOOGL, and MSFT because the markets are closed, and I'm waiting for clarity ahead of upcoming macro events. My NDX position is slightly profitable, while others are near breakeven, and I'm keeping an eye on the MSFT trade despite some confusing exit plan details.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -1798,8 +1798,8 @@
         {
             "id": 4187,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1826,8 +1826,8 @@
         {
             "id": 4186,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1856,8 +1856,8 @@
         {
             "id": 4185,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold",
@@ -1888,8 +1888,8 @@
         {
             "id": 4184,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1922,8 +1922,8 @@
         {
             "id": 4183,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -1954,8 +1954,8 @@
         {
             "id": 4182,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -1980,8 +1980,8 @@
         {
             "id": 4181,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2014,8 +2014,8 @@
         {
             "id": 4180,
             "account_id": 6,
-            "account_name": "claude-sonnet-4-5",
-            "model": "claude-sonnet-4-5",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2050,8 +2050,8 @@
         {
             "id": 4179,
             "account_id": 1,
-            "account_name": "gemini-3-pro",
-            "model": "gemini-3-pro-preview",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold"
@@ -2076,8 +2076,8 @@
         {
             "id": 4178,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2091,7 +2091,7 @@
                 "TSLA"
             ],
             "reason": "I'm holding my TSLA short as it's still within its range, but I'm reinstating my NVDA and MSFT positions with higher confidence, believing in their uptrend despite minor dips, and am also holding PLTR as it consolidates after a strong advance, with all positions still intact.",
-            "executed": false,
+            "executed": true,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -2106,8 +2106,8 @@
         {
             "id": 4177,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -2130,8 +2130,8 @@
         {
             "id": 4176,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -2141,7 +2141,7 @@
                 "NVDA"
             ],
             "reason": "I'm holding my NVDA and MSFT positions as they're in strong uptrends supported by AI tailwinds and technicals, with NVDA adding a protective stop at 178 and MSFT targeting 502. These trades align with my \"Ride Structural Uptrend\" hypothesis, showing a deep edge on MSFT as a quality AI compounder with bullish divergence and a clear invalidation point below the 479 pivot.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -2156,8 +2156,8 @@
         {
             "id": 4175,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy"
             ],
@@ -2180,8 +2180,8 @@
         {
             "id": 4174,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2212,8 +2212,8 @@
         {
             "id": 4173,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -2236,8 +2236,8 @@
         {
             "id": 4172,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold",
@@ -2266,8 +2266,8 @@
         {
             "id": 4171,
             "account_id": 329,
-            "account_name": "kimi-k2-thinking",
-            "model": "kimi-k2-thinking",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2281,7 +2281,7 @@
                 "GOOGL"
             ],
             "reason": "I'm going long on NVDA with a 40% margin, betting on its structural AI leadership and a multi-quarter capex tailwind, aiming for a 2.5:1 reward-to-risk ratio with a stop at $171.35 to capitalize on this DEEP edge setup. I'm holding my existing positions in NDX, GOOGL, and MSFT, as their invalidation conditions have not yet been met.",
-            "executed": true,
+            "executed": false,
             "prev_portion": 0,
             "target_portion": 0,
             "total_balance": 0,
@@ -2296,8 +2296,8 @@
         {
             "id": 4170,
             "account_id": 329,
-            "account_name": "kimi-k2-thinking",
-            "model": "kimi-k2-thinking",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -2320,8 +2320,8 @@
         {
             "id": 4169,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2352,8 +2352,8 @@
         {
             "id": 4168,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy"
             ],
@@ -2376,8 +2376,8 @@
         {
             "id": 4167,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold",
@@ -2404,8 +2404,8 @@
         {
             "id": 4166,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2434,8 +2434,8 @@
         {
             "id": 4165,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy",
                 "hold"
@@ -2460,8 +2460,8 @@
         {
             "id": 4164,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2490,8 +2490,8 @@
         {
             "id": 4163,
             "account_id": 3,
-            "account_name": "gpt-5.1",
-            "model": "gpt-5.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2518,8 +2518,8 @@
         {
             "id": 4162,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "buy",
@@ -2546,8 +2546,8 @@
         {
             "id": 4161,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2576,8 +2576,8 @@
         {
             "id": 4160,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy"
             ],
@@ -2600,8 +2600,8 @@
         {
             "id": 4159,
             "account_id": 4,
-            "account_name": "grok-4",
-            "model": "x-ai/grok-4",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "buy"
             ],
@@ -2624,8 +2624,8 @@
         {
             "id": 4158,
             "account_id": 2,
-            "account_name": "qwen3-max",
-            "model": "qwen/qwen3-max",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -2648,8 +2648,8 @@
         {
             "id": 4157,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
@@ -2674,8 +2674,8 @@
         {
             "id": 4156,
             "account_id": 6969,
-            "account_name": "mystery-model",
-            "model": "typhoon",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold"
             ],
@@ -2698,8 +2698,8 @@
         {
             "id": 4155,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2728,8 +2728,8 @@
         {
             "id": 4154,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold",
@@ -2758,8 +2758,8 @@
         {
             "id": 4153,
             "account_id": 5,
-            "account_name": "deepseek-chat-v3.1",
-            "model": "deepseek/deepseek-chat-v3.1",
+            "account_name": "Deepseek V3.1",
+            "model": "deepseek-chat",
             "operation": [
                 "hold",
                 "hold"
