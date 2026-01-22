@@ -23,11 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="md:text-[14px]">
+    <html lang="en" className="text-sm md:text-[14px]">
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>AI Trader Demo Dashboard</title>
+        {/* Temp for page meta, there's only 1 for MVP Demo v1, hardcoded */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="llm-mvp.j-su.net" />
+        <meta property="og:title" content="AI LLM Trader MVP v1 - Dashboard" />
+        <meta property="og:description" content="AI大模型交易第一版(本地 Mac Cluster部署，本地仅测试 Deepseek V3.1-72B), 关注7美股(盈透)+6数字货币(bi安)，虚拟仓$100k" />
         <link rel="icon" type="image/x-icon" href="/logo_app.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

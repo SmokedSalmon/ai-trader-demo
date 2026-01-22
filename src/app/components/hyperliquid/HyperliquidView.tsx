@@ -85,15 +85,15 @@ export default function HyperliquidView({ wsRef, refreshKey = 0 }: HyperliquidVi
   if (loading && !positionsData) {
     return (
       <div className="flex items-center justify-center h-96">
-        <div className="text-muted-foreground">Loading Hyperliquid data...</div>
+        <div className="text-muted-foreground">Loading account data...</div>
       </div>
     )
   }
 
   return (
     <div className="md:grid md:grid-cols-5 flex flex-col h-full min-h-0 relative">
-      {/* Left Panel - Chart & Account Summary */}
-      <div className={`md:col-span-3 flex-1 flex flex-col border-r md:min-h-0 z-${chartOnTop ? 10 : 1}`}>
+      {/* Panel 1 - Large Screen, Chart & Account Summary, as Left Panel; Narrow Screen, Chart Only, as Top Panel */}
+      <div className={`md:col-span-3 flex-[1_0_50%] flex flex-col border-r md:min-h-0 z-${chartOnTop ? 10 : 1}`}>
         <div className="flex-1">
           {positionsData?.accounts?.length > 0 ? (
             <HyperliquidAssetChart
@@ -105,11 +105,13 @@ export default function HyperliquidView({ wsRef, refreshKey = 0 }: HyperliquidVi
             />
           ) : (
             <div className="bg-card border border-border rounded-lg h-full flex items-center justify-center">
-              <div className="text-muted-foreground">No Hyperliquid account configured</div>
+              <div className="text-muted-foreground">No account configured</div>
             </div>
           )}
         </div>
-        <div className="border-0 basis-28 text-card-foreground p-2 md:basis-24">
+        {/* <div className="border-0 basis-28 text-card-foreground p-2 md:basis-24"> */}
+        {/* Account Summary is on the Left Panel for large screen */}
+        <div className="hidden md:block border-0 border-t-1 text-card-foreground p-2 md:basis-24">
           <HyperliquidMultiAccountSummary
             accounts={accounts}
             refreshKey={refreshKey + chartRefreshKey}
@@ -118,13 +120,21 @@ export default function HyperliquidView({ wsRef, refreshKey = 0 }: HyperliquidVi
         </div>
       </div>
 
-      {/* Right Panel - Feed */}
-      <div className="md:col-span-2 basis-12 flex flex-col min-h-0 z-5">
-        <div className="flex-1 min-h-0 rounded-lg bg-card shadow-sm flex flex-col">
+      {/* Panel 2 - Large Screen: Feed only, as Right Panel; Narrow Screen: Feed + Account Summary, as bottom Panel */}
+      <div className="md:col-span-2 flex-[0_0] basis-54 flex flex-col min-h-0 z-5">
+        <div className="flex-0 md:flex-1 basis-12 min-h-0 rounded-lg bg-card shadow-sm flex flex-col z-10">
           <AlphaArenaFeed
             wsRef={wsRef}
             selectedAccount={selectedAccount}
             onSelectedAccountChange={setSelectedAccount}
+          />
+        </div>
+        {/* Account Summary sits in the Bottom Panel for narrow screen */}
+        <div className="md:hidden flex-1 basis-42 border-0 border-t-1 text-card-foreground p-2 md:basis-24 z-1">
+          <HyperliquidMultiAccountSummary
+            accounts={accounts}
+            refreshKey={refreshKey + chartRefreshKey}
+            selectedAccount={selectedAccount}
           />
         </div>
       </div>

@@ -1,6 +1,7 @@
 'use client'
-import React, { useEffect, useMemo, useState, useRef, useCallback } from 'react'
+import React, { useEffect, useMemo, useState, useRef, useCallback, memo } from 'react'
 import Image from 'next/image'
+import Markdown from 'markdown-to-jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   ArenaAccountMeta,
@@ -24,7 +25,7 @@ import { getModelLogo } from './logoAssets'
 import FlipNumber from './FlipNumber'
 import HighlightWrapper from './HighlightWrapper'
 import { formatDateTime } from '@/lib/dateTime'
-import { Loader2 } from 'lucide-react'
+import { Copy, Loader2 } from 'lucide-react'
 import { copyToClipboard } from '@/lib/utils'
 
 interface AlphaArenaFeedProps {
@@ -133,6 +134,7 @@ export default function AlphaArenaFeed({
   )
   const [expandedChat, setExpandedChat] = useState<number | null>(null)
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({})
+  const [viewRaw, setViewRaw] = useState<boolean>(true)
   const [copiedSections, setCopiedSections] = useState<Record<string, boolean>>({})
   const [manualRefreshKey, setManualRefreshKey] = useState(0)
   const [loadingTrades, setLoadingTrades] = useState(false)
@@ -664,6 +666,58 @@ export default function AlphaArenaFeed({
     }
   }
 
+  const CopyButton = memo(function CopyButton(
+    { id, section, content, isCopied, isInSectionBar }: { id: number, section: 'prompt' | 'reasoning' | 'decision', isInSectionBar?: boolean, content?: string, isCopied?: boolean}
+    ) {
+      return (
+        <button
+          type="button"
+          onClick={async (e) => {
+            e.stopPropagation()
+            if (content) {
+              // copied from handleCopySection()
+              const key = `${id}-${section}`
+              const success = await copyToClipboard(content)
+              if (success) {
+                setCopiedSections((prev) => ({ ...prev, [key]: true }))
+                setTimeout(() => {
+                  setCopiedSections((prev) => ({ ...prev, [key]: false }))
+                }, 2000)
+              } else {
+                console.error('Failed to copy')
+              }
+            }
+          }}
+          className={`${isInSectionBar ? 'px-2 -me-1 py-1' : 'px-3 py-1.5'} text-[10px] font-medium rounded transition-all select-none cursor-pointer ${
+            isCopied
+              ? `${isInSectionBar ? '': 'border border-emerald-500/30'} bg-emerald-500/20 text-emerald-600`
+              : `${isInSectionBar ? '' : 'bg-muted/60 border border-border/60'} bg-gray-100 text-muted-foreground hover:bg-muted hover:text-foreground`
+          }`}
+        >
+          {isCopied ? '✓ Copied' : 'Copy'}
+        </button>
+      )
+  })
+
+  const FormatButton = memo(function FormatButton() {
+    return (
+      <button
+        type="button"
+        onClick={async (e) => {
+          e.stopPropagation()
+          setViewRaw(!viewRaw)
+        }}
+        className={`px-2 py-1 text-[10px] font-medium rounded transition-all select-none cursor-pointer ${
+          viewRaw
+            ? 'bg-gray-300/60 text-muted-foreground hover:bg-gray-300 hover:text-foreground'
+            : 'bg-emerald-500/60 hover:bg-emerald-500/20 text-emerald-600'
+        }`}
+      >
+        {viewRaw ? 'Raw' : 'Rendered'}
+      </button>
+    )
+  })
+
   const isSectionCopied = (entryId: number, section: 'prompt' | 'reasoning' | 'decision') =>
     !!copiedSections[`${entryId}-${section}`]
 
@@ -900,9 +954,9 @@ export default function AlphaArenaFeed({
 
                     return (
                       <HighlightWrapper key={entry.id} isNew={isNew}>
-                        <button
-                          type="button"
-                          className="w-full text-left border border-border rounded bg-muted/30 p-4 space-y-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        <div
+                          // type="button"
+                          className="w-full text-left border border-border rounded bg-muted/30 p-4 space-y-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 cursor-pointer hover:shadow-sm hover:shadow-gray-700 hover:border-0 selected:shadow-sm selected:shadow-gray-700 selected:border-0"
                           onClick={() =>
                             setExpandedChat((current) => {
                               const next = current === entry.id ? null : entry.id
@@ -970,23 +1024,32 @@ export default function AlphaArenaFeed({
                               
                               return (
                                 <div key={section} className="border border-border/60 rounded-md bg-background/60">
-                                  <button
-                                    type="button"
-                                    className="flex w-full items-center justify-between px-3 py-2 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground"
+                                  <div
+                                    // type="button"
+                                    className="flex w-full items-center justify-between px-3 min-h-8 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground cursor-pointer"
                                     onClick={(event) => {
                                       event.stopPropagation()
                                       toggleSection(entry.id, section)
                                     }}
                                   >
                                     <span className="flex items-center gap-2">
-                                      <span className="text-xs">{open ? '▼' : '▶'}</span>
+                                      <span className={`text-xs transition-transform ${open ? 'rotate-90' : ''}`}> ▶ </span>
                                       {label.replace(/_/g, ' ')}
                                     </span>
-                                    <span className="text-[10px] text-muted-foreground/80">{open ? 'Hide details' : 'Show details'}</span>
-                                  </button>
+                                    <span className="flex justify-between items-center gap-1">
+                                      <span className="text-[10px] text-muted-foreground/80 me-1">{open ? 'Hide details' : 'Show details'}</span>
+                                      {open && (
+                                        <>
+                                          {section === 'prompt' && <FormatButton />}
+                                          <div className="w-px h-2 bg-gray-400"/>
+                                          <CopyButton id={entry.id} section={section} content={displayContent} isCopied={copied} isInSectionBar />
+                                        </>
+                                      )}
+                                    </span>
+                                  </div>
                                   {open && (
                                     <div
-                                      className="border-t border-border/40 bg-muted/40 px-3 py-3 text-xs text-muted-foreground"
+                                      className="border-t border-border/40 bg-muted/40 px-3 py-3 text-xs text-muted-foreground relative cursor-auto"
                                       onClick={(event) => event.stopPropagation()}
                                     >
                                       {showLoading ? (
@@ -996,26 +1059,18 @@ export default function AlphaArenaFeed({
                                         </div>
                                       ) : displayContent ? (
                                         <>
-                                          <pre className="whitespace-pre-wrap wrap-break-word font-mono text-[11px] leading-relaxed text-foreground/90">
+                                          {/* <pre className="whitespace-pre-wrap wrap-break-word font-mono text-[11px] leading-relaxed text-foreground/90">
                                             {displayContent}
-                                          </pre>
+                                          </pre> */}
+                                          {/* <Markdown className='chat-markdown cursor-auto'>{displayContent}</Markdown> */}
+                                          { (label === 'USER_PROMPT' && viewRaw) ? (
+                                            <pre className="whitespace-pre-wrap wrap-break-word font-mono text-[11px] leading-relaxed text-foreground/90">
+                                              {displayContent}
+                                            </pre>
+                                          ) : <Markdown className='chat-markdown'>{displayContent}</Markdown>}
+                                          
                                           <div className="mt-3 flex justify-end">
-                                            <button
-                                              type="button"
-                                              onClick={(e) => {
-                                                e.stopPropagation()
-                                                if (displayContent) {
-                                                  handleCopySection(entry.id, section, displayContent)
-                                                }
-                                              }}
-                                              className={`px-3 py-1.5 text-[10px] font-medium rounded transition-all ${
-                                                copied
-                                                  ? 'bg-emerald-500/20 text-emerald-600 border border-emerald-500/30'
-                                                  : 'bg-muted/60 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/60'
-                                              }`}
-                                            >
-                                              {copied ? '✓ Copied' : 'Copy'}
-                                            </button>
+                                            <CopyButton id={entry.id} section={section} content={displayContent} isCopied={copied} />
                                           </div>
                                         </>
                                       ) : (
@@ -1039,9 +1094,10 @@ export default function AlphaArenaFeed({
                           <span>Executed: <span className={`font-semibold ${entry.executed ? 'text-emerald-600' : 'text-amber-600'}`}>{entry.executed ? 'YES' : 'NO'}</span></span>
                         </div> */}
                         <div className="mt-2 text-[11px] text-primary underline">
+                          <span className={`inline-block px-1 transition-transform ${isExpanded ? '-rotate-90' : ''}`}> ▶ </span>
                           {isExpanded ? 'Click to collapse' : 'Click to expand'}
                         </div>
-                        </button>
+                        </div>
                       </HighlightWrapper>
                     )
                   })}
@@ -1070,7 +1126,8 @@ export default function AlphaArenaFeed({
 
                   {!hasMoreModelChat && modelChat.length > 0 && (
                     <div className="flex justify-center pt-4 text-xs text-muted-foreground">
-                      All history loaded
+                      {/* All history loaded */}
+                      Listing 100 most recent chats
                     </div>
                   )}
                   </>

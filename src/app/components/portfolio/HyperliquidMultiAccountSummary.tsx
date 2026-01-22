@@ -155,7 +155,7 @@ export default function HyperliquidMultiAccountSummary({
     return (
       <Card className="p-6">
         <div className="text-sm text-muted-foreground">
-          No Hyperliquid accounts configured
+          No accounts configured
         </div>
       </Card>
     )
@@ -201,8 +201,8 @@ export default function HyperliquidMultiAccountSummary({
               className="border-0 shadow-none space-y-2"
             >
               {/* Account header with logo */}
-              <div className="flex justify-between items-center pb-1 border-b-1 border-border">
-                <div className="flex items-center gap-2 pe-4 border-e-1 border-border md:ps-4">
+              <div className="flex flex-wrap md:flex-nowrap justify-between items-center pb-1 border-b-1 border-border">
+                <div className="flex flex-[0_0_75%] md:flex-[0_1_33%] items-center gap-2 pe-4 my-2 border-0 md:border-e-1 border-border order-1 md:ps-4 md:my-0">
                   {logo && (
                     <Image
                       src={logo.src}
@@ -217,12 +217,14 @@ export default function HyperliquidMultiAccountSummary({
 
                 {/* Update Timestamp */}
                 {globalLastUpdate && (
-                  <div className="truncate flex-1 px-3 text-xs text-muted-foreground">
+                  <div className="truncate flex-1 basis-full md:flex-[1_0_50%] md:shrink-0 md:px-3 text-xs text-muted-foreground order-4 md:order-2 my-0 md:my-0">
                     Last update: {globalLastUpdate}
                   </div>
                 )}
+                
+                {/* <div className="flex-0 block md:hidden order-3 basis-64 justify-self-left bg-gray-400 h-px my-1" /> */}
 
-                <div className="flex items-center justify-between">
+                <div className="flex-[0_1] justify-self-end flex items-center justify-between order-2 md:order-4">
                   {/* <h2 className="text-lg font-semibold">Hyperliquid Account Status</h2> */}
                   <Badge
                     variant={environment === 'testnet' ? 'secondary' : 'destructive'}
@@ -240,18 +242,18 @@ export default function HyperliquidMultiAccountSummary({
 
               {/* Balance data */}
               {account.balance && (
-                <div className="flex justify-between items-center text-center cxs:text-start">
+                <div className="flex justify-between items-center text-center cxs:text-start py-4 md:py-0">
                   {/* Total Equity */}
                   <div className="flex-1 basis-1/2">
-                    <div className="text-xs text-muted-foreground text-start px-2 cxs:px-4">Total Equity</div>
-                    <div className="text-xl font-bold text-start px-2 cxs:px-4 md:text-lg">
+                    <div className="text-xs text-muted-foreground text-start pe-2 md:px-4">Total Equity</div>
+                    <div className="text-xl font-bold text-start pe-2 md:px-4 md:text-lg">
                       {/* ${account.balance.totalEquity.toLocaleString('en-US', {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                       })} */}
                       <NumberFlow
                         value={account.balance.totalEquity}
-                        format={{ style: 'currency', currency: 'USD', maximumFractionDigits: 2 }}
+                        format={{ style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol', maximumFractionDigits: 2 }}
                         trend={0}
                       />
                     </div>
@@ -267,7 +269,7 @@ export default function HyperliquidMultiAccountSummary({
                       })} */}
                       <NumberFlow
                         value={account.balance.usedMargin}
-                        format={{ style: 'currency', currency: 'USD', maximumFractionDigits: 2 }}
+                        format={{ style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol', maximumFractionDigits: 2 }}
                         trend={0}
                       />
                     </div>

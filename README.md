@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI LLM Trading MVP
+> 1 AI watching 7 US Stocks 6 Crypto  
+> Inspired by **nor1.ai** and a full-function community preserved version - [Hyper Alpha Arena](https://github.com/HammerGPT/Hyper-Alpha-Arena)
 
-## Getting Started
-
-First, run the development server:
+## Install & Run
+First
+```bash
+npm install
+```
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+> `Yarn`, `pnmp` or `bun` are also recommended
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+MVP has only 1 Dashboard page at [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Develop (Private)
+Contact me if you are intrigued
 
-To learn more about Next.js, take a look at the following resources:
+**‼️TODO⚠️: Split Remotes**  
+Public release & private stuff are separated, pay attention when pushing your change  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### About The Origin
+Migrated from [Hyper Alpha Arena - /frontend](https://github.com/HammerGPT/Hyper-Alpha-Arena/tree/main/frontend), with library updates and major change on data source
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Detailed modification and changes please refer [docs/about-mvp-demo-v1.md](docs/about-mvp-demo-v1.md) & my personal PKM note - `5.2d.ssr-demo-site-project-mocking-an-ai-trader-dashboard.md`
+- Breakdown and research on origin projects please refer to [docs/nor1.ai-breakdown.md](docs/nor1.ai-breakdown.md) & [docs/origin-project-breakdown-hyper-alpha-arena.md](docs/origin-project-breakdown-hyper-alpha-arena.md)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+Currently it is deployed to vercel, see my note mentioned above

@@ -502,14 +502,14 @@ export default function HyperliquidAssetChart({
     return (
       <Card className="h-full flex items-center justify-center">
         <div className="text-muted-foreground">
-          No Hyperliquid snapshot data yet.
+          No account snapshot data yet.
         </div>
       </Card>
     )
   }
 
   return (
-    <Card className="border-0 border-b-1 shadow-none h-full">
+    <Card className="border-0 shadow-none h-full">
       {/* <div className="h-full relative"> */}
         {/* Time Range Selector */}
         {/* Hide for MVP Demo v1 */}

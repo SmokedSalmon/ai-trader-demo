@@ -94,7 +94,7 @@ function Ticker({ symbol, data }: { symbol: string, data: ParsedSymbolItem }) {
       <div className="font-mono text-gray-800 text-sm font-semibold flex items-baseline">
         <NumberFlow
           value={data.price}
-          format={{ style: 'currency', currency: 'USD', trailingZeroDisplay: 'stripIfInteger' }}
+          format={{ style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol', trailingZeroDisplay: 'stripIfInteger' }}
           trend={0}
         />
       </div>

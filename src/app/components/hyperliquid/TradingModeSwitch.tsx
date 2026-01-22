@@ -149,7 +149,7 @@ export default function TradingModeSwitch() {
                     <p className="font-medium text-orange-700 mb-2">
                       ⚠️ WARNING: This will use REAL FUNDS!
                     </p>
-                    <p>All AI Traders will connect to Hyperliquid Mainnet and execute trades with real money. Make sure:</p>
+                    <p>All AI Traders will connect to Mainnet and execute trades with real money. Make sure:</p>
                     <ul className="list-disc list-inside mt-1 space-y-1">
                       <li>All strategies have been thoroughly tested on Testnet</li>
                       <li>Wallet addresses have sufficient balance</li>
